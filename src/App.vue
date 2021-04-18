@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div v-if="showSideNav" class="col-2 side-nav-col">
-
+        <SideNav />
       </div>
       <div class="col main-col">
         <div class="row">
@@ -21,9 +21,11 @@
 </template>
 
 <script>
+import SideNav from './components/SideNav.vue'
 import { ref } from '@vue/reactivity'
 import { onBeforeMount, onBeforeUpdate, onUnmounted } from '@vue/runtime-core'
 export default {
+  components: {SideNav},
   setup() {
     const showSideNav = ref(false)
   
