@@ -72,13 +72,17 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: $primary
   }
 .container-fluid{
+  width: 100vw;
+  padding-right: 0;
+  padding-left: 0;
   .side-nav-col{
     background: chocolate;
     min-height: 100vh;
-    min-width: 200px;
+    min-width: 240px;
+    padding: 0;
   }
   .main-col{
     position: relative;
@@ -93,7 +97,7 @@ export default {
       height: 60px;
     }
     .main-content{
-      background: darkgoldenrod;
+      background: rgb(255, 255, 255);
       height: 100vh;
       padding-top: 60px;
       display: flex;
@@ -102,17 +106,6 @@ export default {
     }
   }
 }
-#nav {
-    padding: 30px;
-  
-    a {
-      font-weight: bold;
-      color: #77ff00;
-  
-      &.router-link-exact-active {
-        color: $primary;
-      }
-    }
-  }
+
 
 </style>
