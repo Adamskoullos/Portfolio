@@ -7,7 +7,7 @@
       <div class="col main-col">
         <div class="row">
           <div v-if="!showSideNav" class="col top-nav">
-
+            <TopNav />
           </div>
         </div>
         <div class="row">
@@ -22,13 +22,14 @@
 
 <script>
 import SideNav from './components/SideNav.vue'
+import TopNav from './components/TopNav.vue'
 import { ref } from '@vue/reactivity'
 import { onBeforeMount, onBeforeUpdate, onUnmounted } from '@vue/runtime-core'
 export default {
-  components: {SideNav},
+  components: {SideNav, TopNav},
   setup() {
     const showSideNav = ref(false)
-  
+
       onBeforeMount(()=> {
         if(window.innerWidth < 800){
           showSideNav.value = false
@@ -77,9 +78,10 @@ export default {
   width: 100vw;
   padding-right: 0;
   padding-left: 0;
+  max-height: 100vh;
   .side-nav-col{
     // background: chocolate;
-    min-height: 100vh;
+    height: 100vh;
     min-width: 240px;
     padding: 0;
     // border-right: 1px solid rgba(0, 0, 0, 0.11);
@@ -93,8 +95,13 @@ export default {
 
     .top-nav{
       position: fixed;
-      background: cornflowerblue;
+      // background: cornflowerblue;
       height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: stretch;
+      padding-right: 0;
+      padding-left: 0;
     }
     .main-content{
       background: rgb(255, 255, 255);

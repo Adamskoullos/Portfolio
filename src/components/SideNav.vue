@@ -1,8 +1,7 @@
 <template>
-  
           <nav >
             <div class="logo" >
-                <router-link :to="{ name: 'Projects' }" >
+                <router-link v-if="!showBurgerMenu" :to="{ name: 'Projects' }" >
                     <h3 >Adam Skoullos</h3>
                     <h5>Web Dev</h5>
                 </router-link>
@@ -62,8 +61,10 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
+import { onBeforeMount } from '@vue/runtime-core'
 export default {
-
+    
 }
 </script>
 
@@ -81,19 +82,22 @@ nav{
     // margin: auto 5px auto 5px;
     // padding: auto 50px;
     min-width: 230px;
-    box-shadow: 1px 0px 1px rgba(50,50,50,0.1);
+    box-shadow: 1px 0px 5px rgba(22, 22, 22, 0.2);
     
     .logo {
-        margin: 10vh auto 5vh auto;
+        margin: 5vh auto 5vh auto;
+        i{
+            font-size: 30px;
+        }
         a {
         text-decoration: none;
         
             h3{
-            font-size: 30px;
-            font-weight: 300;
+            // font-size: 30px;
+            font-weight: 200;
             }
             h5{
-                font-weight: 400;
+                font-weight: 300;
             }
         }
     }
@@ -116,7 +120,7 @@ nav{
                 h5{
                     display: inline-block;
                     margin: auto 10px;
-                    font-weight: 400;
+                    font-weight: 300;
                 }
                 i{
                     font-size: 22px;
@@ -127,6 +131,9 @@ nav{
             a:hover{
                 transform: scale(1.02);
                 box-shadow: 0px 1px 5px rgba(50,50,50,0.2);
+            }
+            a:active{
+                background: rgb(250, 250, 250);
             }
         }
     }
