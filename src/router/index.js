@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Projects from '../views/Projects.vue'
+import ProDev from '../views/ProDev.vue'
+import TraderDashboards from '../views/TraderDashboards.vue'
 import CodingChallenges from '../views/CodingChallenges.vue'
 import Blog from '../views/Blog.vue'
 import Contact from '../views/Contact.vue'
@@ -16,6 +18,16 @@ const routes = [
     path: '/projects',
     name: 'Projects',
     component: Projects
+  },
+  {
+    path: '/prodev',
+    name: 'ProDev',
+    component: ProDev
+  },
+  {
+    path: '/traderdashboards',
+    name: 'TraderDashboards',
+    component: TraderDashboards
   },
   {
     path: '/challenges',

@@ -1,7 +1,7 @@
 <template>
           <nav >
             <div class="logo" >
-                <router-link v-if="!showBurgerMenu" :to="{ name: 'Projects' }" >
+                <router-link :to="{ name: 'Home' }" >
                     <h3 >Adam Skoullos</h3>
                     <h5>Web Dev</h5>
                 </router-link>
@@ -50,14 +50,13 @@
                 </a>
               </li>
               <li class="nav-item" >
-                  <a href="https://github.com/Adamskoullos" target="_blank">
+                  <a href="https://drive.google.com/file/d/1IwWi7S0WE8t9c4LKK0aTs_Y3b0YrDq8x/view?usp=sharing" download target="_blank">
                     <i class="bi bi-file-earmark-person-fill"></i>
                     <h5>Resume PDF</h5>
                 </a>
               </li>
             </ul>
           </nav>
-     
 </template>
 
 <script>
@@ -115,7 +114,7 @@ nav{
                 height: 60px;
                 margin-right: 3px;
                 background: white;
-                transition: all ease 0.1s;
+                transition: all ease 0s;
                 h5{
                     display: inline-block;
                     margin: auto 10px;
@@ -129,14 +128,24 @@ nav{
             }
             a:hover{
                 transform: scale(1.02);
-                box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
+                box-shadow: $box-shadow;
                 transition: all ease 0.1s;
             }
+            a.projects{
+                background: rgba(255, 255, 255, 0);;
+            }
+            a.projects:hover{
+                transform: scale(1);
+                box-shadow: 0 0 0 rgb(0,0,0,0);
+            }
+            a.project{
+                width: 100%;
+                background: olive;
+            }
             .router-link-active{
-                // background: rgba(97, 97, 97, 0.2);
-                // transition: all ease 0.7s;
+                transition: all ease 0.1s;
                 transform: scale(1.02);
-                box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
+                box-shadow: $box-shadow;
                 h5{
                     color:$active-link-font-color;
                     font-weight: 300;
@@ -145,11 +154,21 @@ nav{
                     color: $active-link-icon;
                 }
             }
-            // .router-link-active:hover{
-                // transform: scale(1.02);
-                // box-shadow: 1px 1px 5px rgba(50,50,50,0);
-                // transition: all ease 0.1s;
-            // }
+            .nav-link{
+                display: flex;
+                padding: 0;
+
+                
+            }
+        }
+        .drop-down-ul{
+            width: 100%;
+        }
+        .drop-down{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
         }
     }
 }
