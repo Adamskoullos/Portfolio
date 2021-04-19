@@ -61,8 +61,6 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
-import { onBeforeMount } from '@vue/runtime-core'
 export default {
     
 }
@@ -93,8 +91,7 @@ nav{
         text-decoration: none;
         
             h3{
-            // font-size: 30px;
-            font-weight: 200;
+            font-weight: 300;
             }
             h5{
                 font-weight: 300;
