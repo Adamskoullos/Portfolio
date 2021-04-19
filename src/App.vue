@@ -91,7 +91,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    background: darkgray;
+    background: rgb(255, 255, 255);
 
     .top-nav{
       position: fixed;
@@ -104,7 +104,6 @@ export default {
       padding-left: 0;
     }
     .main-content{
-      background: rgb(255, 255, 255);
       height: 100vh;
       padding-top: 60px;
       display: flex;

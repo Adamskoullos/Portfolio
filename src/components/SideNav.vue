@@ -69,7 +69,7 @@ export default {
 <style lang="scss">
 
 nav{
-    background: $test;
+    // background: $test;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ nav{
     // margin: auto 5px auto 5px;
     // padding: auto 50px;
     min-width: 230px;
-    box-shadow: 1px 0px 5px rgba(22, 22, 22, 0.2);
+    box-shadow: 1px 0px 1px rgba(90, 90, 90, 0.1);
     
     .logo {
         margin: 5vh auto 5vh auto;
@@ -114,6 +114,8 @@ nav{
                 text-decoration: none;
                 height: 60px;
                 margin-right: 3px;
+                background: white;
+                transition: all ease 0.1s;
                 h5{
                     display: inline-block;
                     margin: auto 10px;
@@ -127,11 +129,27 @@ nav{
             }
             a:hover{
                 transform: scale(1.02);
-                box-shadow: 0px 1px 5px rgba(50,50,50,0.2);
+                box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
+                transition: all ease 0.1s;
             }
-            a:active{
-                background: rgb(250, 250, 250);
+            .router-link-active{
+                // background: rgba(97, 97, 97, 0.2);
+                // transition: all ease 0.7s;
+                transform: scale(1.02);
+                box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
+                h5{
+                    color:$active-link-font-color;
+                    font-weight: 300;
+                }
+                i{
+                    color: $active-link-icon;
+                }
             }
+            // .router-link-active:hover{
+                // transform: scale(1.02);
+                // box-shadow: 1px 1px 5px rgba(50,50,50,0);
+                // transition: all ease 0.1s;
+            // }
         }
     }
 }
