@@ -68,7 +68,6 @@ export default {
 <style lang="scss">
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -79,10 +78,11 @@ export default {
   padding-right: 0;
   padding-left: 0;
   .side-nav-col{
-    background: chocolate;
+    // background: chocolate;
     min-height: 100vh;
     min-width: 240px;
     padding: 0;
+    // border-right: 1px solid rgba(0, 0, 0, 0.11);
   }
   .main-col{
     position: relative;
