@@ -54,7 +54,7 @@ export default {
     display: flex;
     align-items: center;
     // justify-content: ;
-    // background: cornflowerblue;
+    background: rgb(255, 255, 255);
     flex:1;
     box-shadow: 0px 1px 5px rgba(50,50,50,0.3);
 
@@ -67,7 +67,7 @@ export default {
     justify-content: center;
     box-shadow: 0 0 0;
     margin: auto 15px;
-    // background: chartreuse;
+    // background: white;
 
         ul{
             margin: auto 0;

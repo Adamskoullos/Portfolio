@@ -107,11 +107,11 @@ export default {
       height: 100vh;
       padding-top: 60px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
     }
   }
 }
-
 
 </style>
