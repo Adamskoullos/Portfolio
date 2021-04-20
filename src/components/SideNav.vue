@@ -70,8 +70,15 @@ export default {
 
 <style lang="scss">
 
+nav::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+}
+
+nav::-webkit-scrollbar-track {
+background: rgb(168, 168, 168);        /* color of the tracking area */
+}
+
 nav{
-    // background: $test;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -79,10 +86,11 @@ nav{
     justify-content:flex-start;
     position: relative;
     z-index: 10;
-    // margin: auto 5px auto 5px;
-    // padding: auto 50px;
     min-width: 230px;
     box-shadow: 1px 0px 1px rgba(90, 90, 90, 0.1);
+    overflow: auto;
+
+    
     
     .logo {
         margin: 5vh auto;
@@ -105,12 +113,13 @@ nav{
                 margin-left: auto;
                 margin-right: auto;
                 width: 100%;
-                border-radius: 8px;
-                border: 1px;
             }
         }
         i{
             font-size: 30px;
+        }
+        i::before{
+            vertical-align: -.2em;
         }
         a {
         text-decoration: none;

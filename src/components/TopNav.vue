@@ -82,11 +82,24 @@ export default {
             margin-right: 15px;
 
             li{
-                // margin: auto 0;
-                // padding: auto 0;
                 a{
                 box-shadow: 1px 1px 5px rgba(50,50,50,0);
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                    i{
+                    font-size: 26px;
+                    margin: auto 10px;
+                    color: $icon;
+                    }
+                    
+                    i:hover{
+                        transform: scale(1.1);
+                    }
                 }
+                
                 .router-link-active{
                     box-shadow: 1px 1px 5px rgba(50,50,50,0);
                     
@@ -99,14 +112,8 @@ export default {
             }
         }
 
-        i{
-            font-size: 26px;
-            margin: 0 10px;
-            color: $icon;
-        }
-        i:hover{
-            transform: scale(1.1);
-        }
+        
+        
         
     }
     div a{
