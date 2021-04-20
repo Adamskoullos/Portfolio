@@ -1,6 +1,9 @@
 <template>
           <nav >
             <div class="logo" >
+                <div class="image">
+                    <img src="../assets/images/profile_pic.jpg" alt="Adam Skoullos">
+                </div>
                 <router-link :to="{ name: 'Home' }" >
                     <h3 >Adam Skoullos</h3>
                     <h5>Web Dev</h5>
@@ -82,12 +85,36 @@ nav{
     box-shadow: 1px 0px 1px rgba(90, 90, 90, 0.1);
     
     .logo {
-        margin: 5vh auto 5vh auto;
+        margin: 5vh auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100;
+        
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            width: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+            img{
+                flex:1;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                border-radius: 8px;
+                border: 1px;
+            }
+        }
         i{
             font-size: 30px;
         }
         a {
         text-decoration: none;
+        padding-top: 10px;
         
             h3{
             font-weight: 300;

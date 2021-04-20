@@ -57,9 +57,7 @@ export default {
     // background: cornflowerblue;
     flex:1;
     box-shadow: 0px 1px 5px rgba(50,50,50,0.3);
-    .logo{
-        
-    }
+
     .top-nav-row{
     height: 100%;
     flex:1;
