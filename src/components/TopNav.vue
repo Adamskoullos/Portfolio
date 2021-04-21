@@ -93,6 +93,7 @@ export default {
                     font-size: 26px;
                     margin: auto 10px;
                     color: $icon;
+                    padding-top: 5px;
                     }
                     
                     i:hover{
@@ -107,6 +108,7 @@ export default {
                         color: $active-link-icon;
                         transform: scale(1.2);
                         transition: all ease 0.1s;
+                        padding-top: 4px;
                     }
                 }
             }
