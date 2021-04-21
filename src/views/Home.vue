@@ -49,8 +49,8 @@
         <p>In the last 6 months I have made around a 1000 commits and worked on over 25 repos. I have completed over 300 JavaScript coding challenges and am currently learning new skills for my next milestone project that will include Vue 3 on the front-end and Python Flask on the back-end.</p>
       </div>
       <div class="link-icons">
-        <a href="https://github.com/Adamskoullos" target="_blank"><img src="../assets/icons/github.png" alt="logo" class="link github"></a>
-        <a href="https://www.freecodecamp.org/adam-skoullos" target="_blank"><img src="../assets/icons/fcc.jpeg" alt="logo" class="link"></a>
+        <a href="https://github.com/Adamskoullos" target="_blank" class="button"><i class="bi bi-github"></i><span>GitHub Profile</span></a>
+        <a href="https://www.freecodecamp.org/adam-skoullos" target="_blank" class="button"><img src="../assets/icons/fcc-2.png" alt="logo" class="link"><span>FreeCodeCamp Profile</span></a>
       </div>
   </div>
   <div class="divider"></div>
@@ -73,13 +73,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.divider{
-  height: 1px;
-  width: 80%;
-  background: rgba(50,50,50,0.1);
-  margin: 0 auto;
-}
 
 @media (min-width: 690px) and (max-width: 800px) {
   header {
@@ -155,7 +148,7 @@ header{
   
   p{
     text-align: center;
-    max-width: 900px;
+    max-width: 1200px;
     width:90%;
     margin-bottom: 0;
   }
@@ -171,7 +164,7 @@ header{
 }
 .facts{
   padding: 20px 20px 10px 20px;
-  margin-bottom: 0;
+  margin: 0;
 }
 .link-icons{
   display: flex;
@@ -179,23 +172,36 @@ header{
   align-items: center;
   justify-content: center;
   max-width: 500px;
-  padding: 0px;
+  padding: 10px 0 5px 0;
   // background: darkcyan;
-  margin:auto;
-  img.link {
-    height: 75px;
-    margin: auto 15px;
-    border-radius: 50%;
-    transition: all ease 0.2s;
+  margin: auto;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 100px;
+    height: 45px;
+    margin: 10px;
+
+    img {
+      // flex:1;
+      height: 20px;
+      margin-right: 10px;
+      // margin: auto 15px;
+      // border-radius: 50%;
+      // transition: all ease 0.2s;
+    }
+
+    i{
+      flex:1;
+      font-size: 26px;
+      // vertical-align: -.5em;
+      margin-top:4px;
+      margin-right: 10px;
+    }
   }
-  img.github{
-      height: 100px;
-  }
-  img.link:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all ease 0.2s;
-  }
+  
+  
 
 }
 .cta{
@@ -206,6 +212,7 @@ header{
   padding: 20px 20px 0 20px;
   p{
     width:90%;
+    max-width: 1200px;
   }
   .buttons{
     width: 100%;
@@ -238,6 +245,7 @@ header{
   align-items: center;
   p{
     width: 90%;
+    max-width: 1200px;
   }
   a{
     text-decoration: none;
@@ -261,5 +269,12 @@ header{
     background: #30465F;
     transition: all ease 0.2s;
   }
+}
+div.divider{
+  height: 1px;
+  width: 70%;
+  background: rgba(155, 155, 155, 0.1);
+  margin: 10px auto;
+  padding: 1px 0;
 }
 </style>

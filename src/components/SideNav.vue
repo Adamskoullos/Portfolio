@@ -6,7 +6,7 @@
                 </div>
                 <router-link :to="{ name: 'Home' }" >
                     <h3 >Adam Skoullos</h3>
-                    <h5>Web Dev</h5>
+                    <h5>Developer</h5>
                 </router-link>
             </div>
             <ul class="navbar-nav">
