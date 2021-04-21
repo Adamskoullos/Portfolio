@@ -126,7 +126,7 @@ nav{
         padding-top: 10px;
         
             h3{
-            font-weight: 300;
+            font-weight: 200;
             }
             h5{
                 font-weight: 300;
