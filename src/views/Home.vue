@@ -23,32 +23,43 @@
     </div>
   </div>
   <div class="divider"></div>
-  <div class="row rows facts">
-    <div class="col text">
-      <p>In the last 6 months I have made around a 1000 commits and worked on over 25 repos. I have completed over 300 JavaScript coding challenges and am currently learning new skills for my next milestone project that will include Vue 3 on the front-end and Python Flask on the back-end.</p>
+  <div class="row rows">
+    <div class="col cta">
+      <p>Please visit the Projects page to view my current flagship projects or the Coding Challenge page to view my top 5 JavaScript algorithm challenges that I have turned into mini games for you to play.</p>
+      <p>You can also see what I have been up to by viewing my blog which is rendered from a Firebase, Firestore collection and includes a markdown text editor</p>
+      <div class="buttons">
+        <router-link :to="{ name: 'Projects' }" class="button" >
+          <span><i class="bi bi-grid-fill"></i>Projects</span>
+        </router-link>
+        <router-link :to="{ name: 'CodingChallenges' }" class="button">
+          <span><i class="bi bi-puzzle-fill"></i>Coding Challenges</span>
+        </router-link>
+        <router-link :to="{ name: 'Blog' }" class="button">
+          <span><i class="bi bi-chat-left-text-fill"></i>Blog</span>
+        </router-link>
+        <router-link :to="{ name: 'Certifications' }" class="button">
+          <span><i class="bi bi-award-fill"></i>Certifications & Training</span>
+        </router-link>
+      </div>
     </div>
-    <div class="link-icons">
+  </div>
+  <div class="divider"></div>
+    <div class="row rows facts">
+      <div class="col text">
+        <p>In the last 6 months I have made around a 1000 commits and worked on over 25 repos. I have completed over 300 JavaScript coding challenges and am currently learning new skills for my next milestone project that will include Vue 3 on the front-end and Python Flask on the back-end.</p>
+      </div>
+      <div class="link-icons">
         <a href="https://github.com/Adamskoullos" target="_blank"><img src="../assets/icons/github.png" alt="logo" class="link github"></a>
         <a href="https://www.freecodecamp.org/adam-skoullos" target="_blank"><img src="../assets/icons/fcc.jpeg" alt="logo" class="link"></a>
       </div>
   </div>
   <div class="divider"></div>
   <div class="row rows">
-    <div class="col cta">
-      <p>Please visit the Projects page to view my current flagship projects or the Coding Challenge page to view my top 5 JavaScript algorithm challenges that I have turned into mini games for you to play.</p>
-      <p>You can also see what I have been up to by viewing my blog which is rendered from a Firebase, Firestore collection and includes a markdown text editor</p>
-      <div class="buttons">
-        <button>Projects</button>
-        <button>Coding Challenges</button>
-        <button>Blog</button>
-      </div>
-    </div>
-  </div>
-  <div class="divider"></div>
-  <div class="row rows">
     <div class="col contact">
-      <p>You can reach out and contact me anytime via the contact form below which connects to the Email.js api. I look forward to hearing from you.</p>
-      <button>Contact</button>
+      <p>You can reach out and contact me anytime via the contact form which connects to the Email.js api. I look forward to hearing from you.</p>
+      <router-link :to="{ name: 'Contact' }" class="button">
+          <span><i class="bi bi-envelope-fill"></i>Contact</span>
+        </router-link>
     </div>
   </div>
 </template>
@@ -192,7 +203,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   p{
     width:90%;
   }
@@ -201,14 +212,54 @@ header{
     display: flex;
     align-items: center;
     justify-content:center;
+    flex-wrap: wrap;
     // background: chartreuse;
-    button{
-      margin: 0 10px 0 10px;
+    a.button{
+      text-decoration: none;
+      margin: 10px 10px;
+      padding: 10px;
+      // background: olive;
+      
+        
+        i{
+          margin-right: 5px;
+          // vertical-align: -.2em;
+        }
+      
     }
+    
   }
 }
 
 .contact{
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p{
+    width: 90%;
+  }
+  a{
+    text-decoration: none;
+  }
+  i{
+    margin-right: 5px;
+    // vertical-align: -.03em;
+  }
+  .button{
+    margin: 10px;
+    background: #00C587;
+    span{
+      color: white;
+      font-weight: 500;
+      i{
+        color: white;
+      }
+    }
+  }
+  .button:hover{
+    background: #30465F;
+    transition: all ease 0.2s;
+  }
 }
 </style>

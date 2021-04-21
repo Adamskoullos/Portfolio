@@ -110,8 +110,16 @@ export default {
       flex-direction: column;
       justify-content: stretch;
       align-items: stretch;
+      overflow: auto;
     }
   }
+}
+.main-content::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+}
+
+.main-content::-webkit-scrollbar-track {
+background: rgb(168, 168, 168);        /* color of the tracking area */
 }
 
 </style>
