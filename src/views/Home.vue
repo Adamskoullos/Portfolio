@@ -1,5 +1,6 @@
 <template>
-  <header class="row">
+  <div class="wrapper">
+    <header class="row">
     <div class="col">
       <h1>Hi name is Adam Skoullos <br> welcome to my portfolio</h1>
       <h4>
@@ -45,7 +46,7 @@
   </div>
   <div class="divider"></div>
     <div class="row rows facts">
-      <div class="col text">
+      <div class="col-12 text">
         <p>In the last 6 months I have made around a 1000 commits and worked on over 25 repos. I have completed over 300 JavaScript coding challenges and am currently learning new skills for my next milestone project that will include Vue 3 on the front-end and Python Flask on the back-end.</p>
       </div>
       <div class="link-icons">
@@ -61,6 +62,7 @@
           <span><i class="bi bi-envelope-fill"></i>Contact</span>
         </router-link>
     </div>
+  </div>
   </div>
 </template>
 
@@ -83,7 +85,7 @@ export default {
 @media (min-width: 600px) and (max-width: 690px) {
   header {
     // background-color: rgb(94, 255, 0);
-    padding-top: 50px;
+    padding-top: 60px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
@@ -209,7 +211,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 10px 20px;
   p{
     width:90%;
     max-width: 1200px;
@@ -267,7 +269,7 @@ header{
   }
   .button:hover{
     background: #30465F;
-    transition: all ease 0.2s;
+    transition: all ease 0.7s;
   }
 }
 div.divider{

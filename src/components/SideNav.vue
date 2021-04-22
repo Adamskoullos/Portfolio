@@ -108,6 +108,8 @@ nav{
             width: 150px;
             overflow: hidden;
             border-radius: 50%;
+            // box-shadow: 0px 0px 6px rgba(50,50,50,0.4);
+            box-shadow: 1px 1px 4px rgba(50,50,50,0.4);
             img{
                 flex:1;
                 margin-left: auto;
