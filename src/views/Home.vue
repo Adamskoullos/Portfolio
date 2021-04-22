@@ -59,8 +59,8 @@
     <div class="col contact">
       <p>You can reach out and contact me anytime via the contact form which connects to the Email.js api. I look forward to hearing from you.</p>
       <router-link :to="{ name: 'Contact' }" class="button">
-          <span><i class="bi bi-envelope-fill"></i>Contact</span>
-        </router-link>
+        <span><i class="bi bi-envelope-fill"></i>Contact</span>
+      </router-link>
     </div>
   </div>
   </div>
