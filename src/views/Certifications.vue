@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Certifications & Training</h1>
+    <h1><i class="bi bi-award-fill"></i>Certifications & Training</h1>
     <div class="row">
       <div class="col intro">
         <h2>Development Strategy</h2>
@@ -20,12 +20,12 @@
       </div>
     </div>
     <div class="divider"></div>
-    <div class="row course">
+    <div class="row course map">
       <h2>Course Road Map</h2>
-      <div class="col-12 col-lg-4 text">
+      <div class="col-12 text">
         <p>This is the Code Institute pathway, I am currently working towards milestone 3 which focuses on the back-end with Python and Flask</p>
       </div>
-      <div class="col-12 col-lg-8 image">
+      <div class="col-12 image road-map">
         <img src="../assets/images/road-map.png" alt="road map">
       </div>
     </div>
@@ -116,6 +116,10 @@ h1{
   font-weight: 200;
   margin: 20px auto;
 }
+h1 i{
+  margin-right: 6px;
+  color: $icon;
+}
 h2{
     font-weight: 300;
     margin: 15px auto;
@@ -127,10 +131,27 @@ p{
 .course{
   // flex:1;
   margin: 15px auto;
+}
+.map{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .text{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+    text-align: center;
+    border-right: none;
+    }
+  }
   
 }
 .text{
-  margin: 15px auto;
+  margin: 15px 0 15px auto;
+  // margin: 15px auto;
   padding: 0;
   p{
     text-align: end;
@@ -153,23 +174,35 @@ p{
     max-width: 100px;
   }
 }
+
 .image{
   flex:1;
-  margin: 15px auto;
+  margin: 15px auto 15px 0;
+  // margin: 15px auto;
   max-height: 500px;
   width: 90%;
   max-width:500px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   img{
     height: 100%;
     width: 100%;
   }
 }
+@media (min-width: 200px) and (max-width: 1000px){
+    .image{
+      margin: 15px auto;
+    }
+  }
 .icons{
-  max-width:450px;
+  max-width:500px;
+}
+.road-map{
+  max-height: 700px;
+  max-width: 700px;
+  margin: 15px auto;
 }
 div.divider{
   height: 1px;
