@@ -2,7 +2,7 @@
   <div class="form-wrapper">
     <h1><i class="bi bi-envelope-fill"></i>Contact</h1>
     <h3>Thank you for getting in touch</h3>
-    <p>Please fill out the form below with a short message and I will promptly come back to you from my direct email. You can leave your number if you prefer me to call you directly. Thank you</p>
+    <p>Please fill out the form below with a short message and I will come back to you from my direct email. You can leave your number if you prefer me to call you directly. Thank you</p>
     <form @submit.prevent="handleSubmit">
       <input type="text" placeholder="Name" v-model="name" required>
       <input type="email" placeholder="Email" v-model="email" required>
@@ -125,7 +125,7 @@ export default {
       button{
         background: white;
         border: none;
-        padding: 10px;
+        padding: 10px 10px 9px 10px;
         transition: all ease 0.5s;
         box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
         text-decoration: none;
@@ -152,7 +152,7 @@ export default {
       }
       span{
         color:$icon;
-        margin: auto 5px auto 0;
+        margin: auto 5px 3px 0;
         vertical-align: middle;
         font-size: 18px;
       } 
