@@ -130,6 +130,16 @@ header{
     }
   }
 }
+@media (min-width: 200px) and (max-width: 500px) {
+  .tech-icons {
+    padding-bottom: 20px !important;
+  
+    img {
+      max-height: 60px;
+     margin: 10px !important;
+    }
+  }
+}
 .pic{
   display: flex;
   align-items: center;
@@ -279,4 +289,5 @@ div.divider{
   margin: 10px auto;
   padding: 1px 0;
 }
+
 </style>
