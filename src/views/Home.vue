@@ -85,19 +85,19 @@ export default {
 @media (min-width: 600px) and (max-width: 690px) {
   header {
     // background-color: rgb(94, 255, 0);
-    padding-top: 60px;
+    padding-top: 40px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
   header {
     // background-color: rgb(255, 196, 0);
-    padding-top: 70px;
+    padding-top: 30px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
   header {
     // background-color: rgb(255, 196, 0);
-    padding-top: 90px;
+    padding-top: 20px;
   }
 }
 header{
