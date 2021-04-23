@@ -10,7 +10,7 @@
     <div class="divider"></div>
     <div class="row course">
       <div class="col-12 code">
-        <img src="../assets/icons/code.png" alt="road map">
+        <a href="https://drive.google.com/file/d/13Aata6XFSP5y4l1IlHCYl6gntq-4oAf3/view?usp=sharing" target="_blank"><img src="../assets/icons/code.png" alt="road map"></a>
       </div>
       <div class="col-12 col-lg-4 text">
         <p>The long term course from Code Institute is providing me with a solid foundation and touches on the following technologies</p>
@@ -170,6 +170,13 @@ p{
   align-items: center;
   justify-content: center;
   padding: 20px 0 10px 0;
+  a{
+    transition: all ease 0.5s
+  }
+  a:hover{
+    transform: scale(1.1);
+    transition: all ease 0.5s
+  }
   img{
     max-width: 100px;
   }
