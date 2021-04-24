@@ -23,7 +23,7 @@
     <div class="row course map">
       <h2>Course Road Map</h2>
       <div class="col-12 text">
-        <p>This is the Code Institute pathway, I am currently working towards milestone 3 which focuses on the back-end with Python and Flask</p>
+        <p>I am currently working towards milestone 3 which focuses on the back-end with Python and Flask</p>
       </div>
       <div class="col-12 image road-map">
         <img src="../assets/images/road-map.png" alt="road map">
@@ -33,7 +33,7 @@
     <div class="row course">
       <h2>JavaScript Algorithms & Data Structures Training</h2>
       <div class="col-12 col-lg-4 text">
-        <p>FreeCodeCamp provides hundreds of coding challenges that drill and hone skills. This training has really helped me develop the thinking to approach, break down and conquer problems</p>
+        <p>This training has really helped me develop the thinking to approach, break down and conquer problems</p>
       </div>
       <div class="col-12 col-lg-8 image">
         <img src="../assets/images/rubix-3.png" alt="certificate">

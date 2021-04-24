@@ -17,7 +17,7 @@
   <div class="divider"></div>
   <div class="row rows personal">
     <div class="col-12  text">
-      <p>Motivated, passionate and creative, I thrive on learning new skills and evolving. Above all other characteristics, my natural resilience and methodical approach to problem solving has proved to be a strength in my ongoing journey as a developer.</p>
+      <p>Motivated, passionate and creative, I thrive on learning new skills and evolving. Above all other characteristics, my natural resilience and methodical approach to problem solving has proven to be a strength in my ongoing journey as a developer.</p>
     </div>
     <div class="col-12  pic">
       <img src="../assets/images/rubix-3.png" alt="skills">
@@ -26,8 +26,8 @@
   <div class="divider"></div>
   <div class="row rows">
     <div class="col cta">
-      <p>Please visit the Projects page to view my current flagship projects or the Coding Challenge page to view my top 5 JavaScript algorithm challenges.</p>
-      <p>You can also see what I have been up to by viewing my blog which is rendered from a Firebase, Firestore collection and includes a markdown text editor</p>
+      <p>Please view my current flagship projects or check out my top 5 JavaScript algorithm challenges.</p>
+      <p>You can also visit my blog or dig into my training and development so far.</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" >
           <span><i class="bi bi-grid-fill"></i>Projects</span>

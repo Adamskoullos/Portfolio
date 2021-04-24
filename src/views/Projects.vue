@@ -5,9 +5,10 @@
         <h1>ProDev</h1>
         <h5>A light weight and zippy project management hub for small teams</h5>
         <div class="tech-icons">
+          <img src="../assets/icons/htmlCssJs.jpeg" alt="logo">
           <img src="../assets/icons/vue.png" alt="logo">
           <img src="../assets/icons/bootstrap.png" alt="logo">
-          <img src="../assets/icons/sass.png" alt="logo">
+          <img src="../assets/icons/gsap.png" alt="logo">
           <img src="../assets/icons/firebase.png" alt="logo">
         </div>
         <div class="row project-overview">
@@ -15,11 +16,11 @@
             <img src="../assets/images/prodev.png" alt="project image">
           </div>
           <div class="col-12 col-xl-6 overview">
-            <h5>Team Projects View:</h5>
+            <h5>Team Projects:</h5>
             <p>A zoomed out view where all members for example the front end team can collaborate on the larger project by breaking sections down for example different parts of each sprint</p>
-            <h5>User Projects View:</h5>
+            <h5>User Projects:</h5>
             <p>Each team member can create, read, update and delete their own projects</p>
-            <h5>Bugs View:</h5>
+            <h5>Bugs Journal:</h5>
             <p>The bug journal is a place where all team member issues and solutions are listed and shared. Sharing project bugs and solutions can reduce overall project downtime</p>
             <h5>Live Chat:</h5>
             <p>Bringing it all together and focusing the conversation is the built in real-time chat feature allowing team members to quickly discuss and respond to different tasks and issues</p>
@@ -33,27 +34,28 @@
     <div class="divider"></div>
     <div class="row project">
       <div class="col project-col">
-        <h1>ProDev</h1>
-        <h5>A light weight and zippy project management hub for small teams</h5>
+        <h1>Trader Dashboards</h1>
+        <h5>Professional charting solution using real-time and end of day data for equity traders and investors</h5>
+        <h5>Designed to give traders an informational edge</h5>
         <div class="tech-icons">
-          <img src="../assets/icons/vue.png" alt="logo">
-          <img src="../assets/icons/bootstrap.png" alt="logo">
-          <img src="../assets/icons/sass.png" alt="logo">
-          <img src="../assets/icons/firebase.png" alt="logo">
+          <img src="../assets/icons/htmlCssJs.jpeg" alt="logo">
+          <img src="../assets/icons/b4b.png" alt="logo">
+          <img src="../assets/icons/jquery.jpeg" alt="logo">
+          <img src="../assets/icons/ajax.png" alt="logo">
         </div>
         <div class="row project-overview">
           <div class="col-12 col-xl-6 project-image">
-            <img src="../assets/images/prodev.png" alt="project image">
+            <img src="../assets/images/traderDashboards.png" alt="project image">
           </div>
           <div class="col-12 col-xl-6 overview">
-            <h5>Team Projects View:</h5>
-            <p>A zoomed out view where all members for example the front end team can collaborate on the larger project by breaking sections down for example different parts of each sprint</p>
-            <h5>User Projects View:</h5>
-            <p>Each team member can create, read, update and delete their own projects</p>
-            <h5>Bugs View:</h5>
-            <p>The bug journal is a place where all team member issues and solutions are listed and shared. Sharing project bugs and solutions can reduce overall project downtime</p>
-            <h5>Live Chat:</h5>
-            <p>Bringing it all together and focusing the conversation is the built in real-time chat feature allowing team members to quickly discuss and respond to different tasks and issues</p>
+            <h5>Pre-Market Prep:</h5>
+            <p>Multiple-timeframe analysis of the major indexes to frame the market and create a bigger picture road map</p>
+            <h5>Trade with the flow:</h5>
+            <p>Digging deeper and identifying strong sectors in a strong market and weak sectors in a weak market</p>
+            <h5>Stock Analysis:</h5>
+            <p>Analysing specific stocks to potentially trade in line with the the above top down analysis</p>
+            <h5>Monitoring Live Markets:</h5>
+            <p>Quickly identify, process and act on changing intraday sentiment, overall market direction, breaking news and economic events</p>
           </div>
         </div>
         <router-link :to="{ name: 'Projects' }" class="button" >
@@ -108,6 +110,11 @@ export default {
 
   h1{
     margin: 15px auto;
+    font-size: 60px;
+    font-weight: 300;
+  }
+  h5{
+    font-weight: 300;
   }
 
   a.button{
@@ -134,12 +141,13 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    max-width: 500px;
+    width: 100%;
+    max-width: 700px;
     padding: 20px 20px 20px 20px;
     // background: darkcyan;
     margin:auto;
     img{
-      height: 50px;
+      height: 60px;
       margin: auto 15px;
       // overflow: hidden;
     }
@@ -149,7 +157,7 @@ export default {
       padding-bottom: 20px !important;
     
       img {
-        max-height: 60px;
+        max-height: 50px;
       margin: 10px !important;
       }
     }
@@ -183,8 +191,7 @@ export default {
     margin:0 auto;
     h5{
       margin: auto auto 5px 15px;
-      // padding-left: 5px;
-      // border-left: 6px solid rgba(155, 155, 155, 0.2);
+      font-weight: 500;
       }
     p{
       text-align: left;
