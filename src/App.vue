@@ -2,17 +2,23 @@
   <div class="container-fluid">
     <div class="row">
       <div v-if="showSideNav" class="col-2 side-nav-col">
-        <SideNav />
+        <SideNav @scroll="scrollUp"/>
       </div>
       <div class="col main-col">
         <div class="row">
           <div v-if="!showSideNav" class="col top-nav">
-            <TopNav />
+            <TopNav @scroll="scrollUp"/>
           </div>
         </div>
         <div class="row">
-          <div class="col main-content">
-            <router-view/>
+          <div class="col main-content" ref="mainContent">
+            <router-view
+            @scroll="scrollUp" 
+            v-slot="{ Component }">
+              <transition name="route" mode="out-in">
+                <component :is="Component"></component>
+              </transition>  
+            </router-view>
           </div>
         </div>
       </div>
@@ -24,11 +30,17 @@
 import SideNav from './components/SideNav.vue'
 import TopNav from './components/TopNav.vue'
 import { ref } from '@vue/reactivity'
-import { onBeforeMount, onBeforeUpdate, onUnmounted } from '@vue/runtime-core'
+import { onBeforeMount, onBeforeUpdate, onUnmounted, onUpdated } from '@vue/runtime-core'
 export default {
   components: {SideNav, TopNav},
   setup() {
     const showSideNav = ref(false)
+    const mainContent = ref(null)
+    
+    
+    const scrollUp = () => {
+      mainContent.value.scroll(0,0)
+    }
 
       onBeforeMount(()=> {
         if(window.innerWidth < 800){
@@ -61,7 +73,7 @@ export default {
       window.removeEventListener()
     })
 
-   return {showSideNav} 
+   return {showSideNav, mainContent, scrollUp} 
   }
 }
 </script>
@@ -121,5 +133,19 @@ export default {
 .main-content::-webkit-scrollbar-track {
 background: rgb(168, 168, 168);        /* color of the tracking area */
 }
-
+// router transitions
+.route-enter-from{
+  opacity: 1;
+  transform: scale(0)
+}
+.route-enter-active{
+  transition: all 0.2s ease-in;
+}
+.route-leave-to{
+  opacity: 1;
+  transform: scale(0)
+}
+.route-leave-active{
+  transition: all 0.2s ease-out;
+}
 </style>

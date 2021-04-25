@@ -2,7 +2,7 @@
   <div class="wrapper">
     <header class="row">
     <div class="col">
-      <h1>Hi name is Adam Skoullos <br> welcome to my portfolio</h1>
+      <h1>Hi, I'm Adam Skoullos <br> welcome to my portfolio</h1>
       <h4>
         Built as an SPA with:
       </h4>
@@ -29,16 +29,16 @@
       <p>Please view my current flagship projects or check out my top 5 JavaScript algorithm challenges.</p>
       <p>You can also visit my blog or dig into my training and development so far.</p>
       <div class="buttons">
-        <router-link :to="{ name: 'Projects' }" class="button" >
+        <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
           <span><i class="bi bi-grid-fill"></i>Projects</span>
         </router-link>
-        <router-link :to="{ name: 'CodingChallenges' }" class="button">
+        <router-link :to="{ name: 'CodingChallenges' }" class="button" @click="handleScroll">
           <span><i class="bi bi-puzzle-fill"></i>Coding Challenges</span>
         </router-link>
-        <router-link :to="{ name: 'Blog' }" class="button">
+        <router-link :to="{ name: 'Blog' }" class="button" @click="handleScroll">
           <span><i class="bi bi-chat-left-text-fill"></i>Blog</span>
         </router-link>
-        <router-link :to="{ name: 'Certifications' }" class="button">
+        <router-link :to="{ name: 'Certifications' }" class="button" @click="handleScroll">
           <span><i class="bi bi-award-fill"></i>Certifications & Training</span>
         </router-link>
       </div>
@@ -70,7 +70,14 @@
 
 export default {
   name: 'Home',
-  components: {}
+  components: {},
+  setup(props, context){
+      const handleScroll = ()=>{
+          context.emit('scroll')
+      }
+
+      return {handleScroll}
+  }
 }
 </script>
 

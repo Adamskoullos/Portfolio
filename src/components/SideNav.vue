@@ -4,32 +4,32 @@
                 <div class="image">
                     <img src="../assets/images/profile_pic.jpg" alt="Adam Skoullos">
                 </div>
-                <router-link :to="{ name: 'Home' }" >
+                <router-link :to="{ name: 'Home' }" @click="handleScroll">
                     <h3 >Adam Skoullos</h3>
                     <h5>Developer</h5>
                 </router-link>
             </div>
             <ul class="navbar-nav">
               <li class="nav-item" >
-                  <router-link :to="{ name: 'Home' }">
+                  <router-link :to="{ name: 'Home' }" @click="handleScroll">
                       <i class="bi bi-house-fill"></i>
                       <h5>Home</h5>
                   </router-link>
               </li>
               <li class="nav-item" >
-                  <router-link :to="{ name: 'Projects' }">
+                  <router-link :to="{ name: 'Projects' }" @click="handleScroll">
                       <i class="bi bi-grid-fill"></i>
                       <h5>Projects</h5>
                   </router-link>
               </li>
               <li class="nav-item" >
-                  <router-link :to="{ name: 'CodingChallenges' }">
+                  <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
                       <i class="bi bi-puzzle-fill"></i>
                       <h5>Coding Challenges</h5>
                   </router-link>
               </li>
               <li class="nav-item" >
-                  <router-link :to="{ name: 'Blog' }">
+                  <router-link :to="{ name: 'Blog' }" @click="handleScroll">
                       <i class="bi bi-chat-left-text-fill"></i>
                       <h5>Blog</h5>
                   </router-link>
@@ -41,7 +41,7 @@
                   </router-link>
               </li>
               <li class="nav-item" >
-                  <router-link :to="{ name: 'Certifications' }">
+                  <router-link :to="{ name: 'Certifications' }" @click="handleScroll">
                       <i class="bi bi-award-fill"></i>
                       <h5>Certifications</h5>
                   </router-link>
@@ -64,7 +64,13 @@
 
 <script>
 export default {
-    
+    setup(props, context){
+        const handleScroll = ()=>{
+            context.emit('scroll')
+        }
+
+        return {handleScroll}
+    }
 }
 </script>
 

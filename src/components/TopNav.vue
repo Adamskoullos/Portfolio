@@ -1,29 +1,29 @@
 <template>
     <div class="top-nav-container row">
         <div class="logo col-12 col-sm-4" >
-            <router-link :to="{ name: 'Projects' }" >
+            <router-link :to="{ name: 'Projects' }" @click="handleScroll">
                 <h2 >Adam Skoullos</h2>
             </router-link>
         </div>
         <nav class="top-nav-row col-12 col-sm-8">
             <ul class="">
                 <li class="nav-item" >
-                    <router-link :to="{ name: 'Home' }">
+                    <router-link :to="{ name: 'Home' }" @click="handleScroll">
                         <i class="bi bi-house-fill"></i>
                     </router-link>
                 </li>
                 <li class="nav-item" >
-                    <router-link :to="{ name: 'Projects' }">
+                    <router-link :to="{ name: 'Projects' }" @click="handleScroll">
                         <i class="bi bi-grid-fill"></i>
                     </router-link>
                 </li>
                 <li class="nav-item" >
-                  <router-link :to="{ name: 'CodingChallenges' }">
+                  <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
                       <i class="bi bi-puzzle-fill"></i>
                   </router-link>
                 </li>
                 <li class="nav-item" >
-                  <router-link :to="{ name: 'Blog' }">
+                  <router-link :to="{ name: 'Blog' }" @click="handleScroll">
                       <i class="bi bi-chat-left-text-fill"></i>
                   </router-link>
                 </li>
@@ -44,7 +44,13 @@
 
 <script>
 export default {
+    setup(props, context){
+        const handleScroll = ()=>{
+            context.emit('scroll')
+        }
 
+        return {handleScroll}
+    }
     
 }
 </script>
@@ -57,6 +63,7 @@ export default {
     background: rgb(255, 255, 255);
     flex:1;
     box-shadow: 0px 1px 5px rgba(50,50,50,0.3);
+    z-index: 9;
 
     .top-nav-row{
     height: 100%;
@@ -67,7 +74,8 @@ export default {
     justify-content: center;
     box-shadow: 0 0 0;
     margin: auto 15px;
-    // background: white;
+    background: white;
+    z-index: 10;
 
         ul{
             margin: auto 0;
