@@ -26,7 +26,7 @@
             <p>Bringing it all together and focusing the conversation is the built in real-time chat feature allowing team members to quickly discuss and respond to different tasks and issues</p>
           </div>
         </div>
-        <router-link :to="{ name: 'Projects' }" class="button" >
+        <router-link :to="{ name: 'ProDev' }" class="button" >
           <span class="material-icons">open_in_full</span>Detailed View
         </router-link>
       </div>
@@ -58,7 +58,7 @@
             <p>Quickly identify, process and act on changing intraday sentiment, overall market direction, breaking news and economic events</p>
           </div>
         </div>
-        <router-link :to="{ name: 'Projects' }" class="button" >
+        <router-link :to="{ name: 'TraderDashboards' }" class="button" >
           <span class="material-icons">open_in_full</span>Detailed View
         </router-link>
       </div>

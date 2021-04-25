@@ -47,7 +47,7 @@
   <div class="divider"></div>
     <div class="row rows facts">
       <div class="col-12 text">
-        <p>In the last 6 months I have made around a 1000 commits and worked on over 25 repos. I have completed over 300 JavaScript coding challenges and am currently learning new skills for my next milestone project that will include Vue 3 on the front-end and Python Flask on the back-end.</p>
+        <p>Take a look at my GitHub activity via the profile link below or scan through the hundreds of completed JavaScript challenges on my FreeCodeCamp profile.</p>
       </div>
       <div class="link-icons">
         <a href="https://github.com/Adamskoullos" target="_blank" class="button"><i class="bi bi-github"></i><span>GitHub Profile</span></a>
