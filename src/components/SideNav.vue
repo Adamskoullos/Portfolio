@@ -1,75 +1,146 @@
 <template>
           <nav >
             <div class="logo" >
-                <div class="image">
-                    <img src="../assets/images/profile_pic.jpg" alt="Adam Skoullos">
-                </div>
+                <transition appear
+                @before-enter="imageBeforeEnter"
+                @enter="imageEnter">
+                    <div class="image">
+                        <img src="../assets/images/profile_pic.jpg" alt="Adam Skoullos">
+                    </div>
+                </transition>
+                <transition appear
+                @before-enter="nameBeforeEnter"
+                @enter="nameEnter">
                 <router-link :to="{ name: 'Home' }" @click="handleScroll">
                     <h3 >Adam Skoullos</h3>
                     <h5>Developer</h5>
                 </router-link>
+                </transition>
             </div>
+            <transition appear
+            @before-enter="ulBeforeEnter"
+            @enter="ulEnter">
             <ul class="navbar-nav">
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'Home' }" @click="handleScroll">
-                      <i class="bi bi-house-fill"></i>
-                      <h5>Home</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'Projects' }" @click="handleScroll">
-                      <i class="bi bi-grid-fill"></i>
-                      <h5>Projects</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
-                      <i class="bi bi-puzzle-fill"></i>
-                      <h5>Coding Challenges</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'Blog' }" @click="handleScroll">
-                      <i class="bi bi-chat-left-text-fill"></i>
-                      <h5>Blog</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'Contact' }">
-                      <i class="bi bi-envelope-fill"></i>
-                      <h5>Contact</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <router-link :to="{ name: 'Certifications' }" @click="handleScroll">
-                      <i class="bi bi-award-fill"></i>
-                      <h5>Certifications</h5>
-                  </router-link>
-              </li>
-              <li class="nav-item" >
-                  <a href="https://github.com/Adamskoullos" target="_blank">
-                    <i class="bi bi-github"></i>
-                    <h5>GitHub Profile</h5>
-                </a>
-              </li>
-              <li class="nav-item" >
-                  <a href="https://drive.google.com/file/d/1IwWi7S0WE8t9c4LKK0aTs_Y3b0YrDq8x/view?usp=sharing" download target="_blank">
-                    <i class="bi bi-file-earmark-person-fill"></i>
-                    <h5>Resume PDF</h5>
-                </a>
-              </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Home' }" @click="handleScroll">
+                        <i class="bi bi-house-fill"></i>
+                        <h5>Home</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Projects' }" @click="handleScroll">
+                        <i class="bi bi-grid-fill"></i>
+                        <h5>Projects</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
+                        <i class="bi bi-puzzle-fill"></i>
+                        <h5>Coding Challenges</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Blog' }" @click="handleScroll">
+                        <i class="bi bi-chat-left-text-fill"></i>
+                        <h5>Blog</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Contact' }">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h5>Contact</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Certifications' }" @click="handleScroll">
+                        <i class="bi bi-award-fill"></i>
+                        <h5>Certifications</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <a href="https://github.com/Adamskoullos" target="_blank">
+                        <i class="bi bi-github"></i>
+                        <h5>GitHub Profile</h5>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a href="https://drive.google.com/file/d/1IwWi7S0WE8t9c4LKK0aTs_Y3b0YrDq8x/view?usp=sharing" download target="_blank">
+                        <i class="bi bi-file-earmark-person-fill"></i>
+                        <h5>Resume PDF</h5>
+                    </a>
+                </li>
             </ul>
+            </transition>
           </nav>
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
     setup(props, context){
         const handleScroll = ()=>{
             context.emit('scroll')
         }
 
-        return {handleScroll}
+        const imageBeforeEnter = (el) => {
+          el.style.transform = 'scale(0)'
+          el.style.opacity = 1
+        }
+
+        const imageEnter = (el) => {
+          gsap.to(el, {
+            x:0,
+            opacity: 1,
+            scale: 1,
+            delay:1.9,
+            duration: 1,
+            ease: 'elastic',
+          })
+        }
+
+        const nameBeforeEnter = (el) => {
+          el.style.transform = 'scale(0)'
+          el.style.opacity = 1
+        }
+
+        const nameEnter = (el) => {
+          gsap.to(el, {
+            x:0,
+            opacity: 1,
+            scale: 1,
+            delay:1.4,
+            duration: 1,
+            ease: 'elastic',
+          })
+        }
+
+        const ulBeforeEnter = (el) => {
+        //   el.style.transform = 'translateX(-400px)'
+            el.style.transform = 'scale(0)'
+            el.style.opacity = 1
+        }
+
+        const ulEnter = (el) => {
+          gsap.to(el, {
+            x:0,
+            opacity: 1,
+            scale: 1,
+            delay:0.7,
+            duration: 0.2,
+            ease: 'sine',
+          })
+        }
+
+
+        return {
+            handleScroll, 
+            imageBeforeEnter, 
+            imageEnter, 
+            nameBeforeEnter, 
+            nameEnter,
+            ulBeforeEnter,
+            ulEnter}
     }
 }
 </script>
