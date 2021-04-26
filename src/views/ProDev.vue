@@ -46,55 +46,56 @@
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6 details">
+      <div class="col-12 col-sm-8  details">
         <p>The project is built using the <span class="highlight">Vue 3 composition api</span> with all views and components utilising the <span class="highlight">setup()</span> function. <span class="highlight">ref()</span> properties were heavily used to make data reactive and <span class="highlight">props</span> are used to pass data between components.</p>
       </div>
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/vue.png" alt="vue logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/es6.png" alt="JavaScript ES6 logo">
       </div>
-      <div class="col-12 col-lg-6 details">
+      <div class="col-12 col-sm-8 details">
         <p><span class="highlight">ES6 modules</span> were used when extracting component functions and creating composables. As each module is its own scope, closure was heavily taken advantage of in this process allowing each component to stay clutter free and relatively easy to reason about.</p>
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6 details">
+      <div class="col-12 col-sm-8 details">
         <p><span class="highlight">Firebase tools</span> is installed globally on the machine via npm in order to link with the firebase project on the back end during development. Firebase services: <span class="highlight">Firestore</span>, <span class="highlight">Authentication</span> and <span class="highlight">Storage</span> are used within the project.</p>
       </div>
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/firebase.png" alt="Firebase logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/es8.png" alt="JavaScript logo">
       </div>
-      <div class="col-12 col-lg-6 details">
-        <p><span class="highlight">Email.js</span> is used for both the `report issue` and `contact` forms. The async/await with try/catch block pattern was used when connecting to the email.js api and sending form data.</p>
+      <div class="col-12 col-sm-8 details">
+        <p>Email.js is used for both the `report issue` and `contact` forms. The <span class="highlight">async</span>/<span class="highlight">await</span> with try/catch block pattern is used when connecting to the email.js and the different Firebase services.</p>
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6 details">
+      <div class="col-12 col-sm-8 details">
         <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint.</p>
       </div>
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/github.png" alt="github logo">
+        <img src="../assets/icons/trello.png" alt="trello logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 col-sm-4 icons">
+        <img src="../assets/icons/netlify.png" alt="">
       </div>
-      <div class="col-12 col-lg-6 details">
+      <div class="col-12 col-sm-8 details">
         <p>Lastly the ProDev Build Guide documentation is built using <span class="highlight">Vitepress</span> and hosted on <span class="highlight">Netlify</span>. Vitepress is a static site generator designed for building documentation.</p>
       </div>
     </div>
@@ -112,19 +113,19 @@
     <div class="row">
       <h2>Skill Development</h2>
       <div class="col-12 left-skill">
-        <p>Using Bootstrap rows and columns in conjunction with Flexbox has become a styling pattern during this project that I will build on via Sass mixins in future projects.</p>     
+        <p>Using <span class="highlight">Bootstrap</span> rows and columns in conjunction with <span class="highlight">Flexbox</span> has become a styling pattern during this project that I will build on via Sass mixins in future projects.</p>     
       </div>
       <div class="col-12 right-skill">
-        <p>I am using Arrow functions as a norm now and by default am tending to reach for JavaScript methods when working with data.</p>
+        <p>I am using <span class="highlight">Arrow functions</span> as a norm now and by default am tending to reach for <span class="highlight">JavaScript methods</span> when working with data.</p>
       </div>
       <div class="col-12 left-skill">
-        <p>I have become more comfortable using the Async/Await, Try/Catch block pattern when working with api's and have patterned the process of extracting `Use` and `Get` functionality into composables/modules and then importing and destructing them as and when they are needed.  </p>
+        <p>I have become more comfortable using the <span class="highlight">Async/Await</span>, Try/Catch block pattern when working with api's and have patterned the process of extracting `Use` and `Get` functionality into <span class="highlight">composables</span>/<span class="highlight">modules</span> and then importing and destructing them as and when they are needed.  </p>
       </div>
       <div class="col-12 right-skill">
-        <p>I have become competent passing props down and emitting events up using the Vue 3 composition api which has also got me thinking more about data and it's state. Also I feel comfortable manipulating the DOM using Vue directives.</p>
+        <p>I have become competent <span class="highlight">passing props down</span> and <span class="highlight">emitting events up</span> using the <span class="highlight">Vue 3 composition api</span> which has also got me thinking more about data and it's state. Also I feel comfortable manipulating the DOM using Vue directives.</p>
       </div>
       <div class="col-12 left-skill">
-        <p>I have become familiar with the Firebase tools from setting a project up right through to deployment and hosting and have gained experience working with collections via a NoSQL data base.</p>
+        <p>I have become familiar with the <span class="highlight">Firebase tools</span> from setting a project up right through to deployment and hosting and have gained experience working with collections via a <span class="highlight">NoSQL</span> data base.</p>
       </div>
     </div>
     <div class="divider"></div>
@@ -166,7 +167,16 @@ export default {
     /* // background-color: rgb(255, 196, 0); */
     padding-top: 90px;
   }
-} 
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    height: 80px;
+    margin: 30px 10px;
+  } 
+}
 .wrapper-prodev h1{
     margin: 10px auto;
     font-size: 60px;
@@ -256,13 +266,16 @@ export default {
     }
   .details{
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .details p{
     width: 100%;
     margin: auto;
     text-align: justify;
   }
-  .details p span{
+  p span.highlight{
     color: #00b47b;
     font-weight: 500;
   }
@@ -340,5 +353,10 @@ width: 90%;
 background: rgba(155, 155, 155, 0.1);
 margin: 10px auto;
 padding: 1px 0;
+}
+@media (min-width: 200px) and (max-width: 500px) {
+  .right-skill p, .left-skill p{
+    width: 75%;
+  }
 }
 </style>
