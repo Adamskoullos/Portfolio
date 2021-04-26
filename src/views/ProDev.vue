@@ -74,7 +74,7 @@
     <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-sm-4 icons icon-left">
-        <img src="../assets/icons/es8.png" alt="JavaScript logo">
+        <img src="../assets/icons/es8-2.png" alt="JavaScript logo">
       </div>
       <div class="col-12 col-sm-8 details">
         <p>Email.js is used for both the `report issue` and `contact` forms. The <span class="highlight">async</span>/<span class="highlight">await</span> with try/catch block pattern is used when connecting to the email.js and the different Firebase services.</p>
