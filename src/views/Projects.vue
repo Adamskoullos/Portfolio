@@ -26,9 +26,11 @@
             <p>Bringing it all together and focusing the conversation is the built in real-time chat feature allowing team members to quickly discuss and respond to different tasks and issues</p>
           </div>
         </div>
-        <router-link :to="{ name: 'ProDev' }" class="button" @click="handleScroll">
-          <span class="material-icons">open_in_full</span>Detailed View
-        </router-link>
+        <div class="button-div">
+          <router-link :to="{ name: 'ProDev' }" class="button" @click="handleScroll">
+            <span class="material-icons">open_in_full</span>Detailed View
+          </router-link>
+        </div>
       </div>
     </div>
     <div class="divider"></div>
@@ -58,9 +60,11 @@
             <p>Quickly identify, process and act on changing intraday sentiment, overall market direction, breaking news and economic events</p>
           </div>
         </div>
-        <router-link :to="{ name: 'TraderDashboards' }" class="button" @click="handleScroll">
-          <span class="material-icons">open_in_full</span>Detailed View
-        </router-link>
+        <div class="button-div">
+          <router-link :to="{ name: 'TraderDashboards' }" class="button" @click="handleScroll">
+            <span class="material-icons">open_in_full</span>Detailed View
+          </router-link>
+        </div>
       </div>
     </div>
     <div class="divider"></div>
@@ -122,10 +126,11 @@ export default {
   h5{
     font-weight: 300;
   }
-
+  .button-div{
+    padding: 20px 0;
+  }
   a.button{
-    // margin: 200px;
-    background: #00C587;
+    background: $green;
     color: white;
     font-weight: 500;
     span{
@@ -213,9 +218,9 @@ export default {
 
 div.divider{
   height: 1px;
-  width: 70%;
+  width: 90%;
   background: rgba(155, 155, 155, 0.1);
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 1px 0;
 }
 </style>

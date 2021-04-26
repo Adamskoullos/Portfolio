@@ -154,7 +154,7 @@ p{
   // margin: 15px auto;
   padding: 0;
   p{
-    text-align: end;
+    text-align: justify;
     padding: 0 15px;
     border-right: 6px solid rgba(155, 155, 155, 0.2);
   }
@@ -213,9 +213,9 @@ p{
 }
 div.divider{
   height: 1px;
-  width: 70%;
+  width: 90%;
   background: rgba(155, 155, 155, 0.1);
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 1px 0;
 }
 .contact{
@@ -236,7 +236,7 @@ div.divider{
   }
   .button{
     margin: 10px;
-    background: #00C587;
+    background: $green;
     span{
       color: white;
       font-weight: 500;

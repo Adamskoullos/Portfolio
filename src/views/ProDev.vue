@@ -9,15 +9,15 @@
       </div>
       <div class="col-12">
         <div class="buttons">
-          <a href="#" class="button">
+          <a href="https://www.prodev.dev/" target="_blank" class="button">
             <span class="material-icons">play_arrow</span>
             <h6>Live App</h6>
           </a>
-          <a href="#" class="button">
+          <a href="https://prodev-build-guide.netlify.app/" target="_blank" class="button">
             <span class="material-icons spanner">build</span>
             <h6>Build Guide</h6>
           </a>
-          <a href="#" class="button">
+          <a href="https://github.com/Adamskoullos/prodev" target="_blank" class="button">
             <i class="bi bi-github"></i>
             <h6>Read Me</h6>
           </a>
@@ -49,13 +49,13 @@
       <div class="col-12 col-sm-8  details">
         <p>The project is built using the <span class="highlight">Vue 3 composition api</span> with all views and components utilising the <span class="highlight">setup()</span> function. <span class="highlight">ref()</span> properties were heavily used to make data reactive and <span class="highlight">props</span> are used to pass data between components.</p>
       </div>
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-right">
         <img src="../assets/icons/vue.png" alt="vue logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-left">
         <img src="../assets/icons/es6.png" alt="JavaScript ES6 logo">
       </div>
       <div class="col-12 col-sm-8 details">
@@ -67,13 +67,13 @@
       <div class="col-12 col-sm-8 details">
         <p><span class="highlight">Firebase tools</span> is installed globally on the machine via npm in order to link with the firebase project on the back end during development. Firebase services: <span class="highlight">Firestore</span>, <span class="highlight">Authentication</span> and <span class="highlight">Storage</span> are used within the project.</p>
       </div>
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-right">
         <img src="../assets/icons/firebase.png" alt="Firebase logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-left">
         <img src="../assets/icons/es8.png" alt="JavaScript logo">
       </div>
       <div class="col-12 col-sm-8 details">
@@ -85,14 +85,14 @@
       <div class="col-12 col-sm-8 details">
         <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint.</p>
       </div>
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-right">
         <img src="../assets/icons/github.png" alt="github logo">
         <img src="../assets/icons/trello.png" alt="trello logo">
       </div>
     </div>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-12 col-sm-4 icons">
+      <div class="col-12 col-sm-4 icons icon-left">
         <img src="../assets/icons/netlify.png" alt="">
       </div>
       <div class="col-12 col-sm-8 details">
@@ -176,6 +176,12 @@ export default {
     height: 80px;
     margin: 30px 10px;
   } 
+}
+.icon-left{
+  justify-content: flex-end;
+}
+.icon-right{
+  justify-content: flex-start;
 }
 .wrapper-prodev h1{
     margin: 10px auto;
@@ -276,7 +282,7 @@ export default {
     text-align: justify;
   }
   p span.highlight{
-    color: #00b47b;
+    color: $green;
     font-weight: 500;
   }
   .components{
@@ -328,7 +334,7 @@ export default {
   }
 .contact-button{
   margin: 20px;
-  background: #00C587;
+  background: $green;
   border: none;
   padding: 10px;
   transition: all ease 0.5s;
@@ -351,12 +357,17 @@ div.divider{
 height: 1px;
 width: 90%;
 background: rgba(155, 155, 155, 0.1);
-margin: 10px auto;
+margin: 20px auto;
 padding: 1px 0;
 }
 @media (min-width: 200px) and (max-width: 500px) {
   .right-skill p, .left-skill p{
     width: 75%;
+  }
+}
+@media (min-width: 200px) and (max-width: 600px) {
+  .icon-left, .icon-right{
+    justify-content: center;
   }
 }
 </style>

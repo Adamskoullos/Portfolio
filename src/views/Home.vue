@@ -26,7 +26,7 @@
   <div class="divider"></div>
   <div class="row rows">
     <div class="col cta">
-      <p>Please view my current flagship projects or check out my top 5 JavaScript algorithm challenges.</p>
+      <p>View my current flagship projects or check out my top 5 JavaScript algorithm challenges.</p>
       <p>You can also visit my blog or dig into my training and development so far.</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
@@ -166,7 +166,7 @@ header{
   justify-content: center;
   
   p{
-    text-align: justify;
+    text-align: center;
     max-width: 1200px;
     width:90%;
     margin-bottom: 0;
@@ -278,7 +278,7 @@ header{
   }
   .button{
     margin: 10px;
-    background: #00C587;
+    background: $green;
     span{
       color: white;
       font-weight: 500;
@@ -294,9 +294,9 @@ header{
 }
 div.divider{
   height: 1px;
-  width: 70%;
+  width: 90%;
   background: rgba(155, 155, 155, 0.1);
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 1px 0;
 }
 
