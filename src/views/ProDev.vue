@@ -26,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col demo-col">
-        <h3>Demo</h3>
+        <h3>Demo Credentials</h3>
         <div class="demo">
           <div class="demo-item">
             <h6>Email:</h6>
@@ -41,9 +41,10 @@
     </div>
     <div class="row">
       <div class="col-12 details">
-        <p>ProDev is built in vscode and set up via the <span class="highlight">Vue cli</span> which includes: <span class="highlight">Vue-Router</span> to manage SPA routing, <span class="highlight">webpack</span> to bundle and manage all files, <span class="highlight">babel</span> to translate all JS into ES5 for browser compatibility and a node modules pack which also stores all npm installs. <span class="highlight">Bootstrap 5</span> is used mostly for the rows and columns responsiveness, <span class="highlight">material icons</span> are used to keep things tidy especially on mobile devices. <span class="highlight">date-fns</span> is used to present timestamp data for chat messages and <span class="highlight">GSAP</span> is used with <span class="highlight">Vue transitions</span> to add a bit of flare.</p>
+        <p>ProDev is set up via the <span class="highlight">Vue cli</span> which includes: <span class="highlight">Vue-Router</span> to manage SPA routing, <span class="highlight">webpack</span> to bundle and manage all files, <span class="highlight">Babel</span> to translate all JS into ES5 for browser compatibility and a node modules pack which also stores all npm installs. <span class="highlight">Bootstrap 5</span> is used mostly for the rows and columns responsiveness and has been utilised in conjunction with Flexbox. <span class="highlight">Material icons</span> are used to keep things tidy especially on mobile devices, <span class="highlight">date-fns</span> is used to present timestamp data for chat messages and <span class="highlight">GSAP</span> is used with <span class="highlight">Vue transitions</span> and JavaScript hooks to give a snappy and tactile user experience.</p>
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6 details">
         <p>The project is built using the <span class="highlight">Vue 3 composition api</span> with all views and components utilising the <span class="highlight">setup()</span> function. <span class="highlight">ref()</span> properties were heavily used to make data reactive and <span class="highlight">props</span> are used to pass data between components.</p>
@@ -52,6 +53,7 @@
         <img src="" alt="">
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6">
         <img src="" alt="">
@@ -60,6 +62,7 @@
         <p><span class="highlight">ES6 modules</span> were used when extracting component functions and creating composables. As each module is its own scope, closure was heavily taken advantage of in this process allowing each component to stay clutter free and relatively easy to reason about.</p>
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6 details">
         <p><span class="highlight">Firebase tools</span> is installed globally on the machine via npm in order to link with the firebase project on the back end during development. Firebase services: <span class="highlight">Firestore</span>, <span class="highlight">Authentication</span> and <span class="highlight">Storage</span> are used within the project.</p>
@@ -68,6 +71,7 @@
         <img src="" alt="">
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6">
         <img src="" alt="">
@@ -76,6 +80,7 @@
         <p><span class="highlight">Email.js</span> is used for both the `report issue` and `contact` forms. The async/await with try/catch block pattern was used when connecting to the email.js api and sending form data.</p>
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6 details">
         <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint.</p>
@@ -84,6 +89,7 @@
         <img src="" alt="">
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-lg-6">
         <img src="" alt="">
@@ -92,27 +98,40 @@
         <p>Lastly the ProDev Build Guide documentation is built using <span class="highlight">Vitepress</span> and hosted on <span class="highlight">Netlify</span>. Vitepress is a static site generator designed for building documentation.</p>
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <h2>Component Architecture</h2>
-      <div class="col-12 col-lg-6">
+      <div class="col-12 components-text">
         <p>The following visual shows how the project is constructed and wired up. Views are represented by blue, nested components green and composables yellow</p>
       </div>
-      <div class="col-12 col-lg-6">
-        <img src="" alt="">
+      <div class="col-12 components">
+        <img src="../assets/images/compArch.png" alt="components">
       </div>
     </div>
+    <div class="divider"></div>
     <div class="row">
       <h2>Skill Development</h2>
-      <div class="col">
-        <p>Using Bootstrap rows and columns in conjunction with Flexbox has become a styling pattern during this project that I will build on via Sass mixins in future projects.</p>
+      <div class="col-12 left-skill">
+        <p>Using Bootstrap rows and columns in conjunction with Flexbox has become a styling pattern during this project that I will build on via Sass mixins in future projects.</p>     
+      </div>
+      <div class="col-12 right-skill">
         <p>I am using Arrow functions as a norm now and by default am tending to reach for JavaScript methods when working with data.</p>
-        <p>I am comfortable using the Async/Await, Try/Catch block pattern when working with api's</p>
+      </div>
+      <div class="col-12 left-skill">
+        <p>I have become more comfortable using the Async/Await, Try/Catch block pattern when working with api's and have patterned the process of extracting `Use` and `Get` functionality into composables/modules and then importing and destructing them as and when they are needed.  </p>
+      </div>
+      <div class="col-12 right-skill">
         <p>I have become competent passing props down and emitting events up using the Vue 3 composition api which has also got me thinking more about data and it's state. Also I feel comfortable manipulating the DOM using Vue directives.</p>
+      </div>
+      <div class="col-12 left-skill">
         <p>I have become familiar with the Firebase tools from setting a project up right through to deployment and hosting and have gained experience working with collections via a NoSQL data base.</p>
       </div>
-      <div class="col">
-        <img src="" alt="">
-      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="buttons">
+      <router-link :to="{ name: 'Contact' }" class="contact-button">
+        <span><i class="bi bi-envelope-fill"></i>Contact</span>
+      </router-link>
     </div>
   </div>
   
@@ -125,6 +144,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media (min-width: 690px) and (max-width: 800px) {
   .wrapper-prodev {
     /* // background-color: #f00; */
@@ -209,6 +229,7 @@ export default {
     padding:5px 10px;
     box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
     max-width: 500px;
+    border-radius: 50px;
     .demo-item{
       display: flex;
       align-items: center;
@@ -237,7 +258,7 @@ export default {
     padding: 20px;
   }
   .details p{
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: justify;
   }
@@ -245,4 +266,79 @@ export default {
     color: #00b47b;
     font-weight: 500;
   }
+  .components{
+    padding: 10px;
+    margin: 0 auto 13px auto;
+
+   img{
+     width: 100%;
+     max-width: 700px;
+   }
+  }
+  .components-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      width:90%;
+      margin: 15px auto;
+    }
+  }
+  .left-skill{
+    // background: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    p{
+      margin: 20px ;
+      width:55%;
+      text-align: justify;
+      padding-right: 10px;
+      border-right: 6px solid rgba(155, 155, 155, 0.2);
+    }
+  }
+  .right-skill{
+    // background: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    p{
+      margin: 20px;
+      width:55%;
+      text-align: justify;
+      padding-left: 10px;
+      border-left: 6px solid rgba(155, 155, 155, 0.2);
+    }
+  }
+.contact-button{
+  margin: 20px;
+  background: #00C587;
+  border: none;
+  padding: 10px;
+  transition: all ease 0.5s;
+  box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
+  text-decoration: none;
+  span{
+    color: white;
+    font-weight: 500;
+    i{
+      color: white;
+      margin-right: 10px;
+    }
+  }
+}
+  .contact-button:hover{
+    background: #30465F;
+    transition: all ease 0.7s;
+  }
+div.divider{
+height: 1px;
+width: 90%;
+background: rgba(155, 155, 155, 0.1);
+margin: 10px auto;
+padding: 1px 0;
+}
 </style>
