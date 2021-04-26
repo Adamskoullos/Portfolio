@@ -166,7 +166,7 @@ header{
   justify-content: center;
   
   p{
-    text-align: center;
+    text-align: justify;
     max-width: 1200px;
     width:90%;
     margin-bottom: 0;
@@ -184,6 +184,9 @@ header{
 .facts{
   padding: 20px 20px 10px 20px;
   margin: 0;
+  p{
+    text-align: center;
+  }
 }
 .link-icons{
   display: flex;

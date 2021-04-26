@@ -109,7 +109,7 @@ export default {
             x:0,
             opacity: 1,
             scale: 1,
-            delay:1.4,
+            delay:1.2,
             duration: 1,
             ease: 'elastic',
           })

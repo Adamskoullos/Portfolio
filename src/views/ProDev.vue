@@ -1,5 +1,121 @@
 <template>
-  <h2>ProDev</h2>
+  <div class="wrapper-prodev">
+    <div class="row">
+      <h1>ProDev</h1>
+      <div class="col">
+        <div class="header-image">
+          <img src="../assets/images/prodev-main.png" alt="ProDev">
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="buttons">
+          <a href="#" class="button">
+            <span class="material-icons">play_arrow</span>
+            <h6>Live App</h6>
+          </a>
+          <a href="#" class="button">
+            <span class="material-icons spanner">build</span>
+            <h6>Build Guide</h6>
+          </a>
+          <a href="#" class="button">
+            <i class="bi bi-github"></i>
+            <h6>Read Me</h6>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col demo-col">
+        <h3>Demo</h3>
+        <div class="demo">
+          <div class="demo-item">
+            <h6>Email:</h6>
+            <p>superdev@dev.com</p>
+          </div>
+          <div class="demo-item">
+            <h6>Password:</h6>
+            <p>123456</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 details">
+        <p>ProDev is built in vscode and set up via the <span class="highlight">Vue cli</span> which includes: <span class="highlight">Vue-Router</span> to manage SPA routing, <span class="highlight">webpack</span> to bundle and manage all files, <span class="highlight">babel</span> to translate all JS into ES5 for browser compatibility and a node modules pack which also stores all npm installs. <span class="highlight">Bootstrap 5</span> is used mostly for the rows and columns responsiveness, <span class="highlight">material icons</span> are used to keep things tidy especially on mobile devices. <span class="highlight">date-fns</span> is used to present timestamp data for chat messages and <span class="highlight">GSAP</span> is used with <span class="highlight">Vue transitions</span> to add a bit of flare.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6 details">
+        <p>The project is built using the <span class="highlight">Vue 3 composition api</span> with all views and components utilising the <span class="highlight">setup()</span> function. <span class="highlight">ref()</span> properties were heavily used to make data reactive and <span class="highlight">props</span> are used to pass data between components.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+      <div class="col-12 col-lg-6 details">
+        <p><span class="highlight">ES6 modules</span> were used when extracting component functions and creating composables. As each module is its own scope, closure was heavily taken advantage of in this process allowing each component to stay clutter free and relatively easy to reason about.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6 details">
+        <p><span class="highlight">Firebase tools</span> is installed globally on the machine via npm in order to link with the firebase project on the back end during development. Firebase services: <span class="highlight">Firestore</span>, <span class="highlight">Authentication</span> and <span class="highlight">Storage</span> are used within the project.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+      <div class="col-12 col-lg-6 details">
+        <p><span class="highlight">Email.js</span> is used for both the `report issue` and `contact` forms. The async/await with try/catch block pattern was used when connecting to the email.js api and sending form data.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6 details">
+        <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+      <div class="col-12 col-lg-6 details">
+        <p>Lastly the ProDev Build Guide documentation is built using <span class="highlight">Vitepress</span> and hosted on <span class="highlight">Netlify</span>. Vitepress is a static site generator designed for building documentation.</p>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Component Architecture</h2>
+      <div class="col-12 col-lg-6">
+        <p>The following visual shows how the project is constructed and wired up. Views are represented by blue, nested components green and composables yellow</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <h2>Skill Development</h2>
+      <div class="col">
+        <p>Using Bootstrap rows and columns in conjunction with Flexbox has become a styling pattern during this project that I will build on via Sass mixins in future projects.</p>
+        <p>I am using Arrow functions as a norm now and by default am tending to reach for JavaScript methods when working with data.</p>
+        <p>I am comfortable using the Async/Await, Try/Catch block pattern when working with api's</p>
+        <p>I have become competent passing props down and emitting events up using the Vue 3 composition api which has also got me thinking more about data and it's state. Also I feel comfortable manipulating the DOM using Vue directives.</p>
+        <p>I have become familiar with the Firebase tools from setting a project up right through to deployment and hosting and have gained experience working with collections via a NoSQL data base.</p>
+      </div>
+      <div class="col">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+  
 </template>
 
 <script>
@@ -8,6 +124,125 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@media (min-width: 690px) and (max-width: 800px) {
+  .wrapper-prodev {
+    /* // background-color: #f00; */
+    padding-top: 30px;
+  }
+}
+@media (min-width: 600px) and (max-width: 690px) {
+  .wrapper-prodev {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  .wrapper-prodev {
+    padding-top: 70px;
+  }
+}
+@media (min-width: 200px) and (max-width: 350px) {
+  .wrapper-prodev {
+    /* // background-color: rgb(255, 196, 0); */
+    padding-top: 90px;
+  }
+} 
+.wrapper-prodev h1{
+    margin: 10px auto;
+    font-size: 60px;
+    font-weight: 300;
+  }
+.wrapper-prodev h2{
+  font-weight: 300;
+  margin: 15px auto;
+}
+.header-image{
+  padding: 10px;
+  margin: 0 auto;
 
+  img{
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+  }
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+
+}
+
+.buttons a.button{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    h6{
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+    span{
+      margin-right: 3px;
+      font-size: 30px;
+    }
+    .spanner{
+      font-size: 18px;
+      margin-right: 7px;
+    }
+    i{
+      margin-right: 8px;
+      font-size: 18px;
+    }
+  }
+  
+  .demo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #00C587;
+    margin: 15px auto;
+    padding:5px 10px;
+    box-shadow: 1px 1px 5px rgba(50,50,50,0.4);
+    max-width: 500px;
+    .demo-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px 15px;
+      
+      h6{
+        margin-right: 8px;
+        margin-bottom: 0;
+        font-weight: 300;
+      }
+      p{
+        margin-bottom: 0;
+      }
+    }
+    
+    .password{
+      margin-top: 5px;
+    }
+
+  }
+  .demo-col h3{
+      font-weight: 300;
+    }
+  .details{
+    padding: 20px;
+  }
+  .details p{
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+  }
+  .details p span{
+    color: #00b47b;
+    font-weight: 500;
+  }
 </style>

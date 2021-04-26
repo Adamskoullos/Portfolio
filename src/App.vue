@@ -146,6 +146,6 @@ background: rgb(168, 168, 168);        /* color of the tracking area */
   transform: scale(0)
 }
 .route-leave-active{
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 </style>

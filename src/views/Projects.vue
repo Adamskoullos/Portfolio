@@ -26,7 +26,7 @@
             <p>Bringing it all together and focusing the conversation is the built in real-time chat feature allowing team members to quickly discuss and respond to different tasks and issues</p>
           </div>
         </div>
-        <router-link :to="{ name: 'ProDev' }" class="button" >
+        <router-link :to="{ name: 'ProDev' }" class="button" @click="handleScroll">
           <span class="material-icons">open_in_full</span>Detailed View
         </router-link>
       </div>
@@ -53,12 +53,12 @@
             <h5>Trade with the flow:</h5>
             <p>Digging deeper and identifying strong sectors in a strong market and weak sectors in a weak market</p>
             <h5>Stock Analysis:</h5>
-            <p>Analysing specific stocks to potentially trade in line with the the above top down analysis</p>
+            <p>Analysing specific stocks to potentially trade in line with the above top down analysis</p>
             <h5>Monitoring Live Markets:</h5>
             <p>Quickly identify, process and act on changing intraday sentiment, overall market direction, breaking news and economic events</p>
           </div>
         </div>
-        <router-link :to="{ name: 'TraderDashboards' }" class="button" >
+        <router-link :to="{ name: 'TraderDashboards' }" class="button" @click="handleScroll">
           <span class="material-icons">open_in_full</span>Detailed View
         </router-link>
       </div>
@@ -69,7 +69,13 @@
 
 <script>
 export default {
+  setup(props, context){
+      const handleScroll = ()=>{
+          context.emit('scroll')
+      }
 
+      return {handleScroll}
+  }
 }
 </script>
 
@@ -194,7 +200,7 @@ export default {
       font-weight: 500;
       }
     p{
-      text-align: left;
+      text-align: justify;
       margin-left: 15px;
       
       }
