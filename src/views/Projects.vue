@@ -45,7 +45,7 @@
           <img src="../assets/icons/jquery.jpeg" alt="logo">
           <img src="../assets/icons/ajax.png" alt="logo">
         </div>
-        <div class="row project-overview">
+        <div class="row project-overview-traderDashboards">
           <div class="col-12 col-xl-6 project-image">
             <img src="../assets/images/traderDashboards.png" alt="project image">
           </div>
@@ -60,10 +60,18 @@
             <p>Quickly identify, process and act on changing intraday sentiment, overall market direction, breaking news and economic events</p>
           </div>
         </div>
-        <div class="button-div">
-          <router-link :to="{ name: 'TraderDashboards' }" class="button" @click="handleScroll">
-            <span class="material-icons">open_in_full</span>Detailed View
-          </router-link>
+        <div class="next-step">
+          <p>To get the full project break down from design, development through to testing and deployment please visit the ReadMe link below.</p>
+        </div>
+        <div class="button-div-traderDashboards">
+            <a href="https://adamskoullos.github.io/TraderDashboards/" target="_blank" class="button live-app">
+              <span class="material-icons">play_arrow</span>
+              <h6>Live App</h6>
+            </a>
+            <a href="https://github.com/Adamskoullos/TraderDashboards" target="_blank" class="button">
+              <i class="bi bi-github"></i>
+              <h6>Read Me</h6>
+            </a>
         </div>
       </div>
     </div>
@@ -177,6 +185,9 @@ export default {
     // background: chartreuse;
     padding-bottom: 20px;
   }
+  .project-overview-traderDashboards{
+    margin-bottom: 0;
+  }
   .project-image{
     display: flex;
     align-items: center;
@@ -215,6 +226,49 @@ export default {
   }
 }
 
+.button-div-traderDashboards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a.button{
+    margin: 10px auto;
+    color: white;
+    font-weight: 500;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 120px;
+    
+    h6{
+      margin-bottom: 0;
+      font-weight: 500;
+      color: white;
+    }
+    span{
+      margin-right: 3px;
+      font-size: 30px;
+      color: white;
+    }
+    i{
+      margin-right: 8px;
+      font-size: 18px;
+      color: white;
+    }
+  }
+  a.live-app{
+    padding-right: 15px;
+  }
+}
+.next-step{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+}
 
 div.divider{
   height: 1px;

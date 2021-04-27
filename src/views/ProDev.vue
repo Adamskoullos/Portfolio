@@ -83,7 +83,7 @@
     <div class="divider"></div>
     <div class="row">
       <div class="col-12 col-sm-8 details">
-        <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint.</p>
+        <p><span class="highlight">GitHub</span> is used for version control and <span class="highlight">Trello</span> for managing the project and each sprint. In fact towards the end of the project I had switched from Trello to ProDev when planning and organising the final stages as well as logging issues.</p>
       </div>
       <div class="col-12 col-sm-4 icons icon-right">
         <img src="../assets/icons/github.png" alt="github logo">
