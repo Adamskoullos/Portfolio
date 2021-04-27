@@ -64,11 +64,11 @@
           <p>To get the full project break down from design, development through to testing and deployment please visit the ReadMe link below.</p>
         </div>
         <div class="button-div-traderDashboards">
-            <a href="https://adamskoullos.github.io/TraderDashboards/" target="_blank" class="button live-app">
+            <a href="https://adamskoullos.github.io/Trader-Dashboards-V2/" target="_blank" class="button live-app">
               <span class="material-icons">play_arrow</span>
               <h6>Live App</h6>
             </a>
-            <a href="https://github.com/Adamskoullos/TraderDashboards" target="_blank" class="button">
+            <a href="https://github.com/Adamskoullos/Trader-Dashboards-V2" target="_blank" class="button">
               <i class="bi bi-github"></i>
               <h6>Read Me</h6>
             </a>
