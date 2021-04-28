@@ -11,11 +11,13 @@ const login = async (email, password) => {
         const res = await fAuth.signInWithEmailAndPassword(email, password);
         error.value = null;
         isPending.value = false;
+        console.log(res.user.email)
         return res;
     }
     catch(err) {
         error.value = 'Incorrect login credentials';
         isPending.value = false;
+        console.log(err.message)
     }
 };
 

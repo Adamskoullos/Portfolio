@@ -63,9 +63,9 @@ export default {
             isPending.value = false
             router.push({ name: 'SingleBlog', params: { id: res.id } })
             }
-            projectImage.value = null
+            postImage.value = null
             title.value = ''
-            description.value = ''
+            headline.value = ''
             fileError.value = null
             image.value = false
         } 
@@ -76,7 +76,7 @@ export default {
         const selected = e.target.files[0]
         if(selected && fileTypes.includes(selected.type)){
             image.value = true
-            projectImage.value = selected
+            postImage.value = selected
             fileError.value = null
         } else{
             image.value = false
@@ -85,7 +85,7 @@ export default {
         }
         }
 
-        return { title, headline, post, projectImage, fileError, handleSubmit, handleChange, error, isPending, image }
+        return { title, headline, post, postImage, fileError, handleSubmit, handleChange, error, isPending, image }
   }
 }
 

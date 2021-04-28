@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div v-if="showSideNav" class="col-2 side-nav-col">
-        <SideNav @scroll="scrollUp"/>
+        <SideNav @scroll="scrollUp" :user="user" />
       </div>
       <div class="col main-col">
         <div class="row">
@@ -13,6 +13,7 @@
         <div class="row">
           <div class="col main-content" ref="mainContent">
             <router-view
+            :user="user"
             @scroll="scrollUp" 
             v-slot="{ Component }">
               <transition name="route" mode="out-in">
@@ -31,16 +32,21 @@ import SideNav from './components/SideNav.vue'
 import TopNav from './components/TopNav.vue'
 import { ref } from '@vue/reactivity'
 import { onBeforeMount, onBeforeUpdate, onUnmounted, onUpdated } from '@vue/runtime-core'
+import getUser from './composables/getUser'
+
 export default {
+  props: ['login'],
   components: {SideNav, TopNav},
   setup() {
     const showSideNav = ref(false)
     const mainContent = ref(null)
-    
+    const { user } = getUser()
+
     
     const scrollUp = () => {
       mainContent.value.scroll(0,0)
     }
+
 
       onBeforeMount(()=> {
         if(window.innerWidth < 800){
@@ -73,7 +79,7 @@ export default {
       window.removeEventListener()
     })
 
-   return {showSideNav, mainContent, scrollUp} 
+   return {showSideNav, mainContent, scrollUp, user} 
   }
 }
 </script>

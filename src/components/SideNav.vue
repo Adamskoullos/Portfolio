@@ -4,17 +4,19 @@
                 <transition appear
                 @before-enter="imageBeforeEnter"
                 @enter="imageEnter">
-                    <div class="image">
+                    <div class="image" @click="handleLogout">
                         <img src="../assets/images/profile_pic.jpg" alt="Adam Skoullos">
                     </div>
                 </transition>
+                <div>{{ error }}</div>
                 <transition appear
                 @before-enter="nameBeforeEnter"
                 @enter="nameEnter">
-                <router-link :to="{ name: 'Home' }" @click="handleScroll">
+                <div @click="handleLogin">
                     <h3 >Adam Skoullos</h3>
-                    <h5>Developer</h5>
-                </router-link>
+                    <h5 v-if="user" class="logged-in">Developer</h5>
+                    <h5 v-if="!user">Developer</h5>
+                </div>
                 </transition>
             </div>
             <transition appear
@@ -76,9 +78,17 @@
 
 <script>
 import gsap from 'gsap'
+import useLogout from '../composables/useLogout'
+import { useRouter } from 'vue-router'
+import { ref } from '@vue/reactivity'
 
 export default {
+    props: ['login', 'user'],
     setup(props, context){
+        
+        const { logout, error } = useLogout()
+        const router = useRouter()
+        
         const handleScroll = ()=>{
             context.emit('scroll')
         }
@@ -132,6 +142,14 @@ export default {
           })
         }
 
+        const handleLogout = async () => {
+            await logout()
+            router.push({ name: 'Home' })
+        }
+
+        const handleLogin = () => {
+            router.push({ name: 'Login' })
+        }
 
         return {
             handleScroll, 
@@ -140,7 +158,10 @@ export default {
             nameBeforeEnter, 
             nameEnter,
             ulBeforeEnter,
-            ulEnter}
+            ulEnter,
+            handleLogout,
+            handleLogin,
+            error,}
     }
 }
 </script>
@@ -200,8 +221,7 @@ nav{
         i::before{
             vertical-align: -.2em;
         }
-        a {
-        text-decoration: none;
+        div {
         padding-top: 10px;
         
             h3{
@@ -209,6 +229,10 @@ nav{
             }
             h5{
                 font-weight: 300;
+            }
+            .logged-in{
+                color: #30465F;
+                font-weight: 500;
             }
         }
     }
