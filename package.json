@@ -7,9 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@tiptap/starter-kit": "*",
+    "@tiptap/vue-3": "*",
     "bootstrap": "^5.0.0-beta3",
     "core-js": "^3.6.5",
     "emailjs-com": "^2.6.4",
+    "firebase": "^8.4.2",
     "gsap": "^3.6.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"

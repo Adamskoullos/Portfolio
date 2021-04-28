@@ -5,8 +5,21 @@ import ProDev from '../views/ProDev.vue'
 import TraderDashboards from '../views/TraderDashboards.vue'
 import CodingChallenges from '../views/CodingChallenges.vue'
 import Blog from '../views/Blog.vue'
+import NewBlog from '../views/NewBlog.vue'
+import SingleBlog from '../views/SingleBlog.vue'
 import Contact from '../views/Contact.vue'
 import Certifications from '../views/Certifications.vue'
+
+import { fAuth } from '../firebase/config'
+
+const requireAuth = (to, from, next) => {
+  const user = fAuth.currentUser
+  if(!user){
+    next({ name: 'Home' })
+  } else{
+    next()
+  }
+}
 
 const routes = [
   {
@@ -40,6 +53,12 @@ const routes = [
     component: Blog
   },
   {
+    path: '/new-blog',
+    name: 'NewBlog',
+    component: NewBlog,
+    beforeEnter: requireAuth
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: Contact
@@ -48,7 +67,13 @@ const routes = [
     path: '/certifications',
     name: 'Certifications',
     component: Certifications
-  }
+  },
+  {
+    path: '/blog/:id',
+    name: 'SingleBlog',
+    component: SingleBlog,
+    props: true
+  },
 ]
 
 const router = createRouter({
