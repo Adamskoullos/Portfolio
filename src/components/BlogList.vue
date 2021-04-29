@@ -2,8 +2,8 @@
     <h1>Welcome to my developer journal</h1>
     <input type="text" v-model="search" placeholder="Title search" class="search">
     <div class="row row-cols-1 row-cols-md-2 g-4 posts-wrapper">
-        <div class="col-12 col-sm-6 col-lg-4 col-xxl-3" v-for="post in postSearch" :key="post.id">
-            <router-link :to="{ name: 'SingleBlog', params: {id: post.id} }" class="post-wrapper">
+        <div class="col-12 col-sm-6 col-lg-6 col-xxl-4 post-wrapper" v-for="post in postSearch" :key="post.id">
+            <router-link :to="{ name: 'SingleBlog', params: {id: post.id} }" class="">
                 <div class="card h-100">
                     <img :src="post.imageUrl" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -64,17 +64,23 @@ input.search:focus{
     box-shadow: 1px 2px 5px rgba(143, 143, 143, 0.4);
 }
 .posts-wrapper{
-    margin: 0;
+    margin: 5px auto 20px auto;
     text-decoration: none;
     display: flex;
-    justify-content: stretch;
+    justify-content: center;
+
+    .post-wrapper{
+        // margin: 15px;
+    }
 
     .card{
         flex:1;
         border: none;
-        box-shadow: 1px 1px 3px rgba(50,50,50,0.3);
+        // box-shadow: 1px 1px 3px rgba(50,50,50,0.3);
+        box-shadow: 0px 0px 10px rgba(50,50,50,0.5);
         border-radius: 0px;
         transition: all ease 0.4s;
+        margin: 10px;
 
         img{
             border-radius: 0;
@@ -93,9 +99,11 @@ input.search:focus{
     }
     .card:hover{
         transition: all ease 0.4s;
-        box-shadow: 2px 3px 6px rgba(50,50,50,0.3);
+        // box-shadow: 2px 3px 6px rgba(50,50,50,0.3);
+        box-shadow: 2px 3px 15px rgba(50,50,50,0.5);
         transform: scale(1.01);
     }
 }
+
 
 </style>
