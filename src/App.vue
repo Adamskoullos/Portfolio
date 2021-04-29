@@ -120,6 +120,7 @@ export default {
       justify-content: stretch;
       padding-right: 0;
       padding-left: 0;
+      z-index: 1;
     }
     .main-content{
       height: 100vh;
@@ -129,6 +130,7 @@ export default {
       justify-content: stretch;
       align-items: stretch;
       overflow: auto;
+      z-index: 0;
     }
   }
 }
