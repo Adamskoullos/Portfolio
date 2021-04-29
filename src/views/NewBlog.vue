@@ -4,7 +4,10 @@
             <h4>Create new blog post</h4>
             <input type="text" placeholder="Post title" v-model="title"  required>
             <textarea placeholder="Headline" v-model="headline"  required></textarea>
-            <textarea placeholder="post" v-model="post" required></textarea>
+            <input type="text" placeholder="Main Heading" v-model="mainHeading"  required>
+            <textarea placeholder="Main one" v-model="mainOne" required></textarea>
+            <textarea placeholder="Main two" v-model="mainTwo"></textarea>
+            <textarea placeholder="Main three" v-model="mainThree"></textarea>
             <div v-if="!image">
                 <label for="file-upload" class="file-upload-button">Add post image</label>
             </div>
@@ -29,7 +32,10 @@ export default {
       setup(){
         const title = ref('')
         const headline = ref('')
-        const post = ref('')
+        const mainHeading = ref('')
+        const mainOne = ref('')
+        const mainTwo = ref('')
+        const mainThree = ref('')
         const postImage = ref(null)
         const fileTypes = ['image/png', 'image/jpeg']
         const fileError = ref(null)
@@ -51,7 +57,10 @@ export default {
             const res = await addDoc({
             title: title.value,
             headline: headline.value,
-            post: post.value,
+            mainHeading: mainHeading.value,
+            mainOne: mainOne.value,
+            mainTwo: mainTwo.value,
+            mainThree: mainThree.value,
             userId: user.value.uid,
             userName: user.value.displayName,
             imageUrl: url.value,
@@ -84,7 +93,7 @@ export default {
         }
         }
 
-        return { title, headline, post, postImage, fileError, handleSubmit, handleChange, error, isPending, image }
+        return { title, headline, mainHeading, mainOne, mainTwo, mainThree, postImage, fileError, handleSubmit, handleChange, error, isPending, image }
   }
 }
 
@@ -156,7 +165,7 @@ form{
         background: rgb(228, 228, 228);
       }
       button.loading{
-        background: #00C587;
+        background: $green;
         // color: white;
         font-weight: 400;
         span{

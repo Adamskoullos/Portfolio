@@ -1,13 +1,13 @@
 <template>
     <h1>Welcome to my developer journal</h1>
     <input type="text" v-model="search" placeholder="Title search" class="search">
-    <div class="row row-cols-1 row-cols-md-3 g-4 posts-wrapper">
-        <div class="col" v-for="post in postSearch" :key="post.id">
+    <div class="row row-cols-1 row-cols-md-2 g-4 posts-wrapper">
+        <div class="col-12 col-sm-6 col-lg-4 col-xxl-3" v-for="post in postSearch" :key="post.id">
             <router-link :to="{ name: 'SingleBlog', params: {id: post.id} }" class="post-wrapper">
                 <div class="card h-100">
                     <img :src="post.imageUrl" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h3 class="card-title">{{ post.title }}</h3>
                         <p class="card-text">{{ post.headline }}</p>
                     </div>
                 </div>
@@ -66,8 +66,11 @@ input.search:focus{
 .posts-wrapper{
     margin: 0;
     text-decoration: none;
+    display: flex;
+    justify-content: stretch;
 
     .card{
+        flex:1;
         border: none;
         box-shadow: 1px 1px 3px rgba(50,50,50,0.3);
         border-radius: 0px;
@@ -78,8 +81,8 @@ input.search:focus{
         }
         .card-body{
             h3{
-                margin: 5px 0;
-                text-align: left;
+                margin: 5px 0 10px 0;
+                // text-align: left;
                 text-decoration: none;
                 font-weight: 300;
             }
@@ -88,58 +91,10 @@ input.search:focus{
             }
         }
     }
-}
-
-
-.post-list-wrapper{
-    width: 100%;
-    // height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin: 0px auto 20px auto;
-    // background: chartreuse;
-
-    .post{
-        min-width: 250px;
-        max-width: 800px;
-        flex: 1;
-        height:100%;
-        // background: brown;
-        a.route-tag{
-            background: cadetblue;
-            height: 500px;
-        }
-        .card{
-            flex:1;
-            border-radius: 0px;
-            border: none;
-            box-shadow: 1px 1px 3px rgba(50,50,50,0.3);
-            transition: all ease 0.4s;
-            // background: burlywood;
-
-            img{
-                border-radius: 0;
-            }
-            .card-body{
-                h3{
-                    margin: 5px 0;
-                    text-align: left;
-                    text-decoration: none;
-                    font-weight: 300;
-                }
-                p{
-                    text-align: justify;
-                }
-            }
-        }
-        .card:hover{
-            // background: rgba(228, 228, 228, 0.411);
-            transition: all ease 0.4s;
-            box-shadow: 2px 3px 6px rgba(50,50,50,0.3);
-            transform: scale(1.01);
-        }
+    .card:hover{
+        transition: all ease 0.4s;
+        box-shadow: 2px 3px 6px rgba(50,50,50,0.3);
+        transform: scale(1.01);
     }
 }
 
