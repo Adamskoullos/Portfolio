@@ -7,7 +7,6 @@
             <textarea placeholder="post" v-model="post" required></textarea>
             <div v-if="!image">
                 <label for="file-upload" class="file-upload-button">Add post image</label>
-                <span>Required</span>
             </div>
             <label v-if="image" for="file-upload" class="file-upload-button loaded">Image loaded</label>
             <input id="file-upload" type="file" @change="handleChange">
@@ -91,6 +90,109 @@ export default {
 
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+form{
+      width: 90%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      margin: auto;
+      h4{
+          margin: 20px auto;
+          font-weight: 300;
+      }
+      input{
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        // box-shadow: $box-shadow;
+        box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+        transition: all ease 0.3s;
+      }
+      input:focus{
+        outline: none;
+        transition: all ease 0.3s;
+        background: rgba(228, 228, 228, 0.164);
+        transform: scale(1.005);
+        box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+      }
+      textarea{
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+        transition: all ease 0.3s;
+      }
+      textarea:focus{
+        outline: none;
+        transition: all ease 0.3s;
+        background: rgba(228, 228, 228, 0.164);
+        transform: scale(1.005);
+        box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+      }
+      input[type="file"]{
+        display: none;
+    }
+      button{
+        background: white;
+        border: none;
+        padding: 10px 10px 9px 10px;
+        transition: all ease 0.5s;
+        box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
+        text-decoration: none;
+        margin: 10px auto;
+      }
+      button:hover{
+        // transform: scale(1.02);
+        // box-shadow: $box-shadow;
+        transition: all ease 0.8s;
+        background: rgb(228, 228, 228);
+        // background: rebeccapurple;
+      }
+      button:focus{
+        outline: none;
+        background: rgb(228, 228, 228);
+      }
+      button.loading{
+        background: #00C587;
+        // color: white;
+        font-weight: 400;
+        span{
+          color: white;
+        }
+      }
+      span{
+        color:$icon;
+        margin: auto 5px 3px 0;
+        vertical-align: middle;
+        font-size: 18px;
+      }
+      .file-upload-button{
+        background: white;
+        border: none;
+        padding: 10px 10px 9px 10px;
+        transition: all ease 0.5s;
+        box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
+        text-decoration: none;
+        margin: 10px auto;
+        }
+    .file-upload-button:hover{
+        transition: all ease 0.8s;
+        background: rgb(228, 228, 228);
+    }
+    .loaded{
+        background: $green;
+        // color: white;
+        font-weight: 400;
+        // background: rgb(228, 228, 228);
+        box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
+    }
+    .loaded:hover{
+        cursor: default;
+        transform: scale(1);
+        color: $green;
+    }
+}
 </style>
