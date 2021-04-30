@@ -77,7 +77,7 @@ input.search:focus{
         flex:1;
         border: none;
         // box-shadow: 1px 1px 3px rgba(50,50,50,0.3);
-        box-shadow: 0px 0px 10px rgba(50,50,50,0.5);
+        box-shadow: 0px 0px 8px rgba(50,50,50,0.5);
         border-radius: 0px;
         transition: all ease 0.4s;
         margin: 10px;

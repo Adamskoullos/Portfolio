@@ -10,9 +10,10 @@
       </div>
       <div class="details col-12 col-lg-6">
         <h2>{{ document.mainHeading }}</h2>
-        <p>{{ document.mainOne }}</p>
-        <p>{{ document.mainTwo }}</p>
-        <p>{{ document.mainThree }}</p>
+        <div v-html="markdown" class="markdown-body"></div>
+        <!-- <p>{{ document.mainOne }}</p> -->
+        <!-- <p>{{ document.mainTwo }}</p> -->
+        <!-- <p>{{ document.mainThree }}</p> -->
       </div>
       </div>
     </div>
@@ -21,6 +22,10 @@
 
 <script>
 import getDocument from '../composables/getDocument'
+import marked from 'marked'
+import hljs from 'highlight.js';
+import 'highlight.js/styles/a11y-light.css';
+import { computed } from '@vue/runtime-core'
 
 export default {
   props: ['id'],
@@ -28,12 +33,24 @@ export default {
 
     const { document, error } = getDocument('posts', props.id)
 
-    return { error, document }
+    const markdown = computed(() => {
+          return marked(document.value.mainOne, {
+            highlight(md){
+              return hljs.highlightAuto(md).value
+            }
+          });
+        })
+
+    return { error, document, markdown }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.markdown-body{
+  text-align: justify;
+}
 .main-wrapper{
   display: flex;
   flex-direction: column;

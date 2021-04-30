@@ -17,6 +17,9 @@
             <button  v-if="!isPending">Upload post</button>
             <button  v-if="isPending" class="loading">Uploading...</button>
         </form>
+        <div class="marked col-12">
+          <div v-html="markdown"></div>
+        </div>
     </div>
 </template>
 
@@ -27,6 +30,10 @@ import useCollection from '../composables/useCollection'
 import getUser from '../composables/getUser'
 import { timestamp } from '../firebase/config'
 import { useRouter } from 'vue-router'
+import marked from 'marked'
+import hljs from 'highlight.js';
+import 'highlight.js/styles/a11y-light.css';
+import { computed } from '@vue/runtime-core'
 
 export default {
       setup(){
@@ -47,6 +54,14 @@ export default {
         const { user } = getUser()
         const router = useRouter()
 
+        const markdown = computed(() => {
+          return marked(mainOne.value, {
+            highlight(md){
+              return hljs.highlightAuto(md).value
+            }
+          });
+        })
+
         const handleSubmit = async () => {
         if(!postImage.value){
             fileError.value = 'Please select an image to load'
@@ -58,7 +73,7 @@ export default {
             title: title.value,
             headline: headline.value,
             mainHeading: mainHeading.value,
-            mainOne: mainOne.value,
+            mainOne: markdown.value,
             mainTwo: mainTwo.value,
             mainThree: mainThree.value,
             userId: user.value.uid,
@@ -93,13 +108,18 @@ export default {
         }
         }
 
-        return { title, headline, mainHeading, mainOne, mainTwo, mainThree, postImage, fileError, handleSubmit, handleChange, error, isPending, image }
+        return { markdown, title, headline, mainHeading, mainOne, mainTwo, mainThree, postImage, fileError, handleSubmit, handleChange, error, isPending, image }
   }
 }
 
 </script>
 
 <style lang="scss" scoped>
+
+.marked{
+  margin: 30px 20px 30px 20px;
+  text-align: justify;
+}
 form{
       width: 90%;
       max-width: 1000px;
