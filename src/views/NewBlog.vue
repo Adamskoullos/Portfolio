@@ -6,8 +6,6 @@
             <textarea placeholder="Headline" v-model="headline"  required></textarea>
             <input type="text" placeholder="Main Heading" v-model="mainHeading"  required>
             <textarea placeholder="Main one" v-model="mainOne" required></textarea>
-            <textarea placeholder="Main two" v-model="mainTwo"></textarea>
-            <textarea placeholder="Main three" v-model="mainThree"></textarea>
             <div v-if="!image">
                 <label for="file-upload" class="file-upload-button">Add post image</label>
             </div>
@@ -18,7 +16,7 @@
             <button  v-if="isPending" class="loading">Uploading...</button>
         </form>
         <div class="marked col-12">
-          <div v-html="markdown"></div>
+          <div v-html="markdown" class="markdown-div"></div>
         </div>
     </div>
 </template>
@@ -32,7 +30,8 @@ import { timestamp } from '../firebase/config'
 import { useRouter } from 'vue-router'
 import marked from 'marked'
 import hljs from 'highlight.js';
-import 'highlight.js/styles/a11y-light.css';
+// import 'highlight.js/styles/a11y-light.css';
+import 'highlight.js/styles/solarized-dark.css';
 import { computed } from '@vue/runtime-core'
 
 export default {
@@ -117,9 +116,19 @@ export default {
 <style lang="scss" scoped>
 
 .marked{
-  margin: 30px 20px 30px 20px;
+  margin: 30px auto;
   text-align: justify;
+  max-width: 900px;
+  // background: red;
 }
+.markdown-div{
+  // display: flex;
+  // flex-wrap: wrap;
+  width:100%;
+  text-align: justify;
+  // background: grey;
+}
+
 form{
       width: 90%;
       max-width: 1000px;

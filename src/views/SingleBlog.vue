@@ -11,9 +11,6 @@
       <div class="details col-12 col-lg-6">
         <h2>{{ document.mainHeading }}</h2>
         <div v-html="markdown" class="markdown-body"></div>
-        <!-- <p>{{ document.mainOne }}</p> -->
-        <!-- <p>{{ document.mainTwo }}</p> -->
-        <!-- <p>{{ document.mainThree }}</p> -->
       </div>
       </div>
     </div>
@@ -25,6 +22,7 @@ import getDocument from '../composables/getDocument'
 import marked from 'marked'
 import hljs from 'highlight.js';
 import 'highlight.js/styles/a11y-light.css';
+// import 'highlight.js/styles/solarized-dark.css';
 import { computed } from '@vue/runtime-core'
 
 export default {
@@ -60,6 +58,10 @@ export default {
   h1{
     margin: 15px auto;
     font-weight: 300;
+  }
+  h2{
+    margin: 10px auto 20px auto;
+    font-weight: 400;
   }
 
   h4.headline{
