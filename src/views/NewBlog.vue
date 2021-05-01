@@ -29,6 +29,7 @@ import getUser from '../composables/getUser'
 import { timestamp } from '../firebase/config'
 import { useRouter } from 'vue-router'
 import marked from 'marked'
+import DOMPurify from 'dompurify';
 import hljs from 'highlight.js';
 // import 'highlight.js/styles/a11y-light.css';
 import 'highlight.js/styles/solarized-dark.css';
@@ -54,11 +55,11 @@ export default {
         const router = useRouter()
 
         const markdown = computed(() => {
-          return marked(mainOne.value, {
+          return DOMPurify.sanitize(marked(mainOne.value, {
             highlight(md){
               return hljs.highlightAuto(md).value
             }
-          });
+          }));
         })
 
         const handleSubmit = async () => {

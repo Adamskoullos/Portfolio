@@ -47,7 +47,9 @@ export default {
 <style lang="scss" scoped>
 
 .markdown-body{
+  box-sizing: border-box;
   text-align: justify;
+  width: 100%;
 }
 .main-wrapper{
   display: flex;
@@ -72,7 +74,7 @@ export default {
     margin: 20px auto;
     padding: 0;
     width:90%;
-    max-width: 900px;
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,9 +82,9 @@ export default {
   }
   img{
     margin: 20px auto;
-    width: 100%;
+    max-width: 100%;
     padding: 0px;
-    box-shadow: 2px 3px 10px rgba(50,50,50,0.5);
+    // box-shadow: 2px 3px 10px rgba(50,50,50,0.5);
   }
   p{
     margin: 20px auto;
@@ -93,6 +95,28 @@ export default {
     margin: 20px auto;
     width:90%;
     max-width: 900px;
+  }
+}
+@media (min-width: 690px) and (max-width: 800px) {
+  .main-wrapper {
+    /* // background-color: #f00; */
+    padding-top: 30px;
+  }
+}
+@media (min-width: 600px) and (max-width: 690px) {
+  .main-wrapper {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  .main-wrapper {
+    padding-top: 70px;
+  }
+}
+@media (min-width: 200px) and (max-width: 350px) {
+  .main-wrapper {
+    /* // background-color: rgb(255, 196, 0); */
+    padding-top: 90px;
   }
 }
 </style>

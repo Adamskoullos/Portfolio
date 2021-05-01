@@ -70,7 +70,7 @@ input.search:focus{
     justify-content: center;
 
     .post-wrapper{
-        // margin: 15px;
+        margin: 20px 0;
     }
 
     .card{
