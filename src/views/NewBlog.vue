@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row new-blog">
         <form @submit.prevent="handleSubmit" class="col-12" >
             <h4>Create new blog post</h4>
             <input type="text" placeholder="Post title" v-model="title"  required>
@@ -233,5 +233,27 @@ form{
         transform: scale(1);
         color: $green;
     }
+}
+@media (min-width: 690px) and (max-width: 800px) {
+  .new-blog {
+    /* // background-color: #f00; */
+    padding-top: 30px;
+  }
+}
+@media (min-width: 600px) and (max-width: 690px) {
+  .new-blog {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  .new-blog {
+    padding-top: 70px;
+  }
+}
+@media (min-width: 200px) and (max-width: 350px) {
+  .new-blog {
+    /* // background-color: rgb(255, 196, 0); */
+    padding-top: 90px;
+  }
 }
 </style>

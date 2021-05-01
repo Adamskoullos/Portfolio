@@ -22,7 +22,6 @@ import getDocument from '../composables/getDocument'
 import marked from 'marked'
 import hljs from 'highlight.js';
 import 'highlight.js/styles/a11y-light.css';
-// import 'highlight.js/styles/solarized-dark.css';
 import { computed } from '@vue/runtime-core'
 
 export default {
@@ -50,6 +49,7 @@ export default {
   box-sizing: border-box;
   text-align: justify;
   width: 100%;
+  color: red;
 }
 .main-wrapper{
   display: flex;
