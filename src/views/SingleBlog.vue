@@ -4,15 +4,15 @@
     <div v-if="document" class="blog-wrapper">
       <h1>{{ document.title }}</h1>
       <h4 class="headline">{{ document.headline }}</h4>
-      <div class="row">
-        <div class="image col-12 col-lg-6">
-        <img :src="document.imageUrl" alt="blog image">
-      </div>
-      <div class="details col-12 col-lg-6">
-        <h2>{{ document.mainHeading }}</h2>
-        <div v-html="markdown" class="markdown-body"></div>
-      </div>
-      </div>
+      <!-- <div class="row"> -->
+        <div class="image ">
+          <img :src="document.imageUrl" alt="blog image">
+        </div>
+        <div class="details ">
+          <h2>{{ document.mainHeading }}</h2>
+          <div v-html="markdown" class="markdown-body"></div>
+        </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -48,55 +48,82 @@ export default {
 .markdown-body{
   box-sizing: border-box;
   text-align: justify;
-  width: 100%;
-  color: red;
+  width: 90%;
+  // background: red;
+  margin: auto;
+  padding: 10px; 
+
+  
 }
 .main-wrapper{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  // background: grey;
 
-  h1{
+  .blog-wrapper{
+    flex:1;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background: cornflowerblue;
+    h1{
     margin: 15px auto;
     font-weight: 300;
-  }
-  h2{
-    margin: 10px auto 20px auto;
-    font-weight: 400;
-  }
+    }
+    h2{
+      margin: 10px auto 20px auto;
+      font-weight: 400;
+    }
 
-  h4.headline{
-    margin: 20px auto;
-    font-weight: 400;
-  }
-  .image{
-    margin: 20px auto;
-    padding: 0;
-    width:90%;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  img{
-    margin: 20px auto;
-    max-width: 100%;
-    padding: 0px;
-    // box-shadow: 2px 3px 10px rgba(50,50,50,0.5);
-  }
-  p{
-    margin: 20px auto;
-    text-align: justify;
-    padding: 20px;
-  }
-  .details{
-    margin: 20px auto;
-    width:90%;
-    max-width: 900px;
+    h4.headline{
+      margin: 20px auto;
+      font-weight: 400;
+    }
+    .image{
+
+      margin: 20px auto;
+      padding: 0;
+      width:90%;
+      // max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background: green;
+      
+    }
+    img{
+      margin: 20px auto;
+      width: 100%;
+      max-width: 400px;
+      padding: 0px;
+      // box-shadow: 2px 3px 10px rgba(50,50,50,0.5);
+    }
+    p{
+      margin: 20px auto;
+      text-align: justify;
+      padding: 20px;
+    }
+    .details{
+      margin: 20px auto;
+      width:100%;
+      padding: 0;
+      max-width: 900px;
+      // background: greenyellow;
+
+      pre code{
+        background: cornsilk;
+      }
+    }
   }
 }
+.language-js{
+        background: cornsilk;
+        margin: 300px;
+      }
 @media (min-width: 690px) and (max-width: 800px) {
   .main-wrapper {
     /* // background-color: #f00; */
