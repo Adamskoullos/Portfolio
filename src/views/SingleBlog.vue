@@ -4,7 +4,6 @@
     <div v-if="document" class="blog-wrapper">
       <h1>{{ document.title }}</h1>
       <h4 class="headline">{{ document.headline }}</h4>
-      <!-- <div class="row"> -->
         <div class="image ">
           <img :src="document.imageUrl" alt="blog image">
         </div>
@@ -12,7 +11,11 @@
           <h2>{{ document.mainHeading }}</h2>
           <div v-html="markdown" class="markdown-body"></div>
         </div>
-      <!-- </div> -->
+    </div>
+    <div class="buttons">
+      <router-link :to="{ name: 'Contact' }" class="contact-button">
+        <span><i class="bi bi-envelope-fill"></i>Contact</span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -22,6 +25,7 @@ import getDocument from '../composables/getDocument'
 import marked from 'marked'
 import hljs from 'highlight.js';
 import 'highlight.js/styles/a11y-light.css';
+// import 'highlight.js/styles/obsidian.css';
 import { computed } from '@vue/runtime-core'
 
 export default {
@@ -35,7 +39,7 @@ export default {
             highlight(md){
               return hljs.highlightAuto(md).value
             }
-          });
+         });
         })
 
     return { error, document, markdown }
@@ -51,8 +55,11 @@ export default {
   width: 90%;
   // background: red;
   margin: auto;
-  padding: 10px; 
-
+  padding: 10px;
+  color: red; 
+  h1, h2{
+    color: red;
+  }
   
 }
 .main-wrapper{
@@ -113,9 +120,8 @@ export default {
       padding: 0;
       max-width: 900px;
       // background: greenyellow;
-
-      pre code{
-        background: cornsilk;
+      h2{
+        font-weight: 300;
       }
     }
   }
@@ -146,4 +152,33 @@ export default {
     padding-top: 90px;
   }
 }
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+
+}
+.contact-button{
+  margin: 20px;
+  background: $green;
+  border: none;
+  padding: 10px;
+  transition: all ease 0.5s;
+  box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
+  text-decoration: none;
+  span{
+    color: white;
+    font-weight: 500;
+    i{
+      color: white;
+      margin-right: 10px;
+    }
+  }
+}
+  .contact-button:hover{
+    background: #30465F;
+    transition: all ease 0.7s;
+  }
 </style>
