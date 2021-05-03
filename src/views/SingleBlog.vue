@@ -80,15 +80,18 @@ export default {
     h1{
     margin: 15px auto;
     font-weight: 300;
+    color: rgb(100, 100, 100)
     }
     h2{
       margin: 10px auto 20px auto;
       font-weight: 400;
+      color: rgb(68, 68, 68);
     }
 
     h4.headline{
       margin: 20px auto;
       font-weight: 400;
+      color: rgb(100, 100, 100)
     }
     .image{
 
