@@ -2,7 +2,7 @@
     <h1>Welcome to my developer journal</h1>
     <input type="text" v-model="search" placeholder="Title search" class="search">
     <div class="row row-cols-1 row-cols-md-2 g-4 posts-wrapper">
-        <div class="col-12 col-sm-6 col-lg-6  post-wrapper" v-for="post in postSearch" :key="post.id">
+        <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 post-wrapper" v-for="post in postSearch" :key="post.id">
             <router-link :to="{ name: 'SingleBlog', params: {id: post.id} }" class="">
                 <div class="card h-100">
                     <img :src="post.imageUrl" class="card-img-top" alt="...">

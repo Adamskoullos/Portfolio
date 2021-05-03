@@ -8,7 +8,7 @@
           <img :src="document.imageUrl" alt="blog image">
         </div>
         <div class="details ">
-          <h2>{{ document.mainHeading }}</h2>
+          <!-- <h2>{{ document.mainHeading }}</h2> -->
           <div v-html="markdown" class="markdown-body"></div>
         </div>
     </div>
