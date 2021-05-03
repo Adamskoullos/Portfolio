@@ -2,10 +2,10 @@
   <div class="wrapper">
     <header class="row">
     <div class="col">
-      <h1>Hi, I'm Adam Skoullos <br> welcome to my portfolio</h1>
-      <h4>
+      <h1>Welcome to my portfolio</h1>
+      <h5>
         Built as an SPA with:
-      </h4>
+      </h5>
       <div class="tech-icons">
         <img src="../assets/icons/vue.png" alt="logo">
         <img src="../assets/icons/bootstrap.png" alt="logo">
@@ -16,11 +16,13 @@
   </header>
   <div class="divider"></div>
   <div class="row rows personal">
-    <div class="col-12  text">
-      <p>Motivated, passionate and creative, I thrive on learning new skills and evolving. Above all other characteristics, my natural resilience and methodical approach to problem solving has proven to be a strength in my ongoing journey as a developer.</p>
-    </div>
-    <div class="col-12  pic">
+    <h1>Motivated, passionate and creative</h1>
+    <h5>I thrive on learning new skills and evolving</h5>
+    <div class="col-6 col-sm-4 pic">
       <img src="../assets/images/rubix-3.png" alt="skills">
+    </div>
+    <div class="col-6 col-sm-8 text">
+      <p>Above all other characteristics, my natural resilience and methodical approach to <span>problem solving</span> has proven to be a strength in my ongoing journey as a developer.</p>
     </div>
   </div>
   <div class="divider"></div>
@@ -115,11 +117,11 @@ header{
   align-items: stretch;
   justify-content: stretch;
   h1{
-    font-weight: 200;
-  }
-  h4{
     font-weight: 300;
-    margin-top:30px;
+  }
+  h5{
+    font-weight:400;
+    margin-top:10px;
   }
   .tech-icons{
     display: flex;
@@ -150,14 +152,15 @@ header{
 .pic{
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-height: 150px;
+  justify-content: right;
+  // max-height: 150px;
   // box-shadow: $box-shadow;
 
   overflow: hidden;
   img{
     // height: 100%;
     max-height: 150px;
+    margin: auto 0px auto auto;
   }
 }
 .text{
@@ -169,7 +172,14 @@ header{
     text-align: center;
     max-width: 1200px;
     width:90%;
-    margin-bottom: 0;
+    // width: 400px;
+    margin: auto;
+    span{
+      color: $green;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    
   }
   
 }
@@ -180,6 +190,21 @@ header{
     // background: chartreuse;
   padding: 20px 20px 10px 20px;
   margin-bottom:0;
+  h1{
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  h5{
+    margin:0px auto 30px auto;
+    font-weight:400;
+  }
+  p{
+    margin: auto auto auto 0;
+    padding-left: 10px;
+    border-left: 6px solid rgba(155, 155, 155, 0.2);
+    text-align: justify;
+    max-width: 600px;
+  }
 }
 .facts{
   padding: 20px 20px 10px 20px;

@@ -110,6 +110,7 @@ export default {
       width: 100%;
       max-width: 400px;
       padding: 0px;
+      border-radius: 10px;
       // box-shadow: 2px 3px 10px rgba(50,50,50,0.5);
     }
     p{

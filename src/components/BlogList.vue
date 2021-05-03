@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 h1{
-    font-weight: 200;
+    font-weight: 300;
     margin: 0 auto 15px auto;
 }
 a{
@@ -90,7 +90,7 @@ input.search:focus{
                 margin: 5px 0 10px 0;
                 // text-align: left;
                 text-decoration: none;
-                font-weight: 300;
+                font-weight: 500;
             }
             p{
                 text-align: center;
