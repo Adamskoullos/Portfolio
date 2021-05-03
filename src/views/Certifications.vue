@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col intro">
         <h2>Development Strategy</h2>
-        <p>My approach in becoming a full-stack developer was to go with one long term course that enforces checkpoints along the way and includes milestone projects, mentoring and touches upon many technologies. And then to supplement this core journey with focused satellite courses to deep-dive specific skills and technologies. </p>
+        <p>My approach in becoming a full-stack developer was to go with one long term course that includes milestone projects, mentoring and touches upon many technologies. And then to supplement this core journey with focused satellite courses to deep-dive specific skills and technologies. </p>
       </div>
     </div>
     <div class="divider"></div>
@@ -121,8 +121,9 @@ h1 i{
   color: $icon;
 }
 h2{
-    font-weight: 300;
     margin: 15px auto;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
 }
 p{
   width: 90%;
@@ -131,6 +132,10 @@ p{
 .course{
   // flex:1;
   margin: 15px auto;
+  h2{
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+  }
 }
 .map{
   display: flex;

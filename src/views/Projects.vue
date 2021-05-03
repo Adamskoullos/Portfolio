@@ -130,6 +130,7 @@ export default {
     margin: 15px auto;
     font-size: 60px;
     font-weight: 300;
+    color: rgb(100, 100, 100);
   }
   h5{
     font-weight: 300;
@@ -214,6 +215,7 @@ export default {
     h5{
       margin: auto auto 5px 15px;
       font-weight: 500;
+      color: rgb(87, 87, 87);
       }
     p{
       text-align: justify;

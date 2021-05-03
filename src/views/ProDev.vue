@@ -187,6 +187,7 @@ export default {
     margin: 10px auto;
     font-size: 60px;
     font-weight: 300;
+    color: rgb(100, 100, 100);
   }
 .wrapper-prodev h2{
   font-weight: 300;

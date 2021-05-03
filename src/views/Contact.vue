@@ -78,7 +78,8 @@ export default {
     }
     h3{
       margin: 20px auto;
-      font-weight: 300;
+      font-weight: 400;
+      color: rgb(100, 100, 100);
     }
     p{
       width: 90%;

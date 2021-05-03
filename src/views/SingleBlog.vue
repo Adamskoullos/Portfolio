@@ -79,7 +79,7 @@ export default {
     // background: cornflowerblue;
     h1{
     margin: 15px auto;
-    font-weight: 300;
+    font-weight: 400;
     color: rgb(100, 100, 100)
     }
     h2{

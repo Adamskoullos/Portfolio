@@ -22,14 +22,14 @@
       <img src="../assets/images/rubix-3.png" alt="skills">
     </div>
     <div class="col-6 col-sm-8 text">
-      <p>Above all other characteristics, my natural resilience and methodical approach to <span>problem solving</span> has proven to be a strength in my ongoing journey as a developer.</p>
+      <p>My natural resilience and methodical approach to <span>problem solving</span> has proven to be a strength in my ongoing journey as a developer.</p>
     </div>
   </div>
   <div class="divider"></div>
   <div class="row rows">
     <div class="col cta">
-      <p>View my current flagship projects or check out my top 5 JavaScript algorithm challenges.</p>
-      <p>You can also visit my blog or dig into my training and development so far.</p>
+      <p>View my current flagship <span>projects</span> or check out my top 5 JavaScript algorithm <span>challenges</span>.</p>
+      <p>You can also visit my <span>blog</span> or dig into my <span>training and development</span> so far.</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
           <span><i class="bi bi-grid-fill"></i>Projects</span>
@@ -117,10 +117,11 @@ header{
   align-items: stretch;
   justify-content: stretch;
   h1{
-    font-weight: 300;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
   }
   h5{
-    font-weight:400;
+    font-weight:300;
     margin-top:10px;
   }
   .tech-icons{
@@ -177,7 +178,7 @@ header{
     span{
       color: $green;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 500;
     }
     
   }
@@ -191,12 +192,13 @@ header{
   padding: 20px 20px 10px 20px;
   margin-bottom:0;
   h1{
-    font-weight: 300;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
     margin-bottom: 10px;
   }
   h5{
     margin:0px auto 30px auto;
-    font-weight:400;
+    font-weight:300;
   }
   p{
     margin: auto auto auto 0;
@@ -260,6 +262,11 @@ header{
   p{
     width:90%;
     max-width: 1200px;
+    span{
+      color: $green;
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
   .buttons{
     width: 100%;
