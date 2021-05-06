@@ -28,7 +28,7 @@
   <div class="divider"></div>
   <div class="row rows">
     <div class="col cta">
-      <p>View my current flagship <span>projects</span> or check out my <span>blog</span> to view my top 5 JavaScript algorithm <span>challenges</span>.</p>
+      <p>View my current flagship <span>projects</span> or check out my <span>blog</span> to view my top 5 JavaScript algorithm challenges.</p>
       <p>You can also dig into my <span>training and development</span> so far.</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
