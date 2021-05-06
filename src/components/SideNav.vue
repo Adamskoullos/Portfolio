@@ -36,27 +36,21 @@
                     </router-link>
                 </li>
                 <li class="nav-item" >
-                    <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
-                        <i class="bi bi-puzzle-fill"></i>
-                        <h5>Coding Challenges</h5>
-                    </router-link>
-                </li>
-                <li class="nav-item" >
                     <router-link :to="{ name: 'Blog' }" @click="handleScroll">
                         <i class="bi bi-chat-left-text-fill"></i>
                         <h5>Blog</h5>
                     </router-link>
                 </li>
                 <li class="nav-item" >
-                    <router-link :to="{ name: 'Contact' }">
-                        <i class="bi bi-envelope-fill"></i>
-                        <h5>Contact</h5>
-                    </router-link>
-                </li>
-                <li class="nav-item" >
                     <router-link :to="{ name: 'Certifications' }" @click="handleScroll">
                         <i class="bi bi-award-fill"></i>
                         <h5>Certifications</h5>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link :to="{ name: 'Contact' }">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h5>Contact</h5>
                     </router-link>
                 </li>
                 <li class="nav-item" >

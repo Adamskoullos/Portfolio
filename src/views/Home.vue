@@ -28,14 +28,11 @@
   <div class="divider"></div>
   <div class="row rows">
     <div class="col cta">
-      <p>View my current flagship <span>projects</span> or check out my top 5 JavaScript algorithm <span>challenges</span>.</p>
-      <p>You can also visit my <span>blog</span> or dig into my <span>training and development</span> so far.</p>
+      <p>View my current flagship <span>projects</span> or check out my <span>blog</span> to view my top 5 JavaScript algorithm <span>challenges</span>.</p>
+      <p>You can also dig into my <span>training and development</span> so far.</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
           <span><i class="bi bi-grid-fill"></i>Projects</span>
-        </router-link>
-        <router-link :to="{ name: 'CodingChallenges' }" class="button" @click="handleScroll">
-          <span><i class="bi bi-puzzle-fill"></i>Coding Challenges</span>
         </router-link>
         <router-link :to="{ name: 'Blog' }" class="button" @click="handleScroll">
           <span><i class="bi bi-chat-left-text-fill"></i>Blog</span>

@@ -33,10 +33,10 @@
     <div class="row course">
       <h2>JavaScript Algorithms & Data Structures Training</h2>
       <div class="col-12 col-lg-4 text">
-        <p>This training has really helped me develop the thinking to approach, break down and conquer problems</p>
+        <p>I cannot overstate the value of this training. Through determination I have developed the thinking to approach, break down, research and conquer problems</p>
       </div>
       <div class="col-12 col-lg-8 image">
-        <img src="../assets/images/rubix-3.png" alt="certificate">
+        <img src="../assets/images/fcc-javascript.png" alt="certificate">
       </div>
     </div>
     <div class="divider"></div>

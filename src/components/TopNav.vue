@@ -18,11 +18,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item" >
-                  <router-link :to="{ name: 'CodingChallenges' }" @click="handleScroll">
-                      <i class="bi bi-puzzle-fill"></i>
-                  </router-link>
-                </li>
-                <li class="nav-item" >
                   <router-link :to="{ name: 'Blog' }" @click="handleScroll">
                       <i class="bi bi-chat-left-text-fill"></i>
                   </router-link>
