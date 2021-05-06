@@ -174,7 +174,7 @@ header{
     margin: auto;
     span{
       color: $green;
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 500;
     }
     
@@ -261,7 +261,7 @@ header{
     max-width: 1200px;
     span{
       color: $green;
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 500;
     }
   }

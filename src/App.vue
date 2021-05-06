@@ -147,13 +147,13 @@ background: rgb(168, 168, 168);        /* color of the tracking area */
   transform: scale(0)
 }
 .route-enter-active{
-  transition: all 0.2s ease-in;
+  transition: all 0s ease-in;
 }
 .route-leave-to{
   opacity: 1;
   transform: scale(0)
 }
 .route-leave-active{
-  transition: all 0.3s ease-out;
+  transition: all 0s ease-out;
 }
 </style>
