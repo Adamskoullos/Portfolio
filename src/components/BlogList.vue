@@ -101,7 +101,8 @@ input.search:focus{
     text-decoration: none;
     display: flex;
     justify-content: center;
-
+    padding-right: 15px;
+    padding-left: 15px;
     .post-wrapper{
         margin: 20px 0;
     }

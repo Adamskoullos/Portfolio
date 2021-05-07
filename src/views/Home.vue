@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="row">
-      <img src="../assets/images/real-hero.jpg" alt="background" class="background">
+      <img src="../assets/images/real-hero.jpg" alt="background" class="background cover">
     <div class="col">
       <h1>Welcome to my portfolio</h1>
       <h5>
@@ -28,7 +28,7 @@
   </div>
   <!-- <div class="divider"></div> -->
   <div class="row rows cta-row">
-    <img src="../assets/images/real-cta.jpg" alt="background" class="background">
+    <img src="../assets/images/real-cta.jpg" alt="background" class="background cover">
     <div class="col cta">
       <p>View my current flagship <span>projects</span> or check out my <span>blog</span>.</p>
       <p>You can also dig into my <span>training </span>and<span> development</span> so far</p>
@@ -146,9 +146,9 @@ header{
     padding-left: 0;
     padding-right: 0;
     margin: 0;
-    right: 0;
-    left:0;
-    min-width: 100%;
+    // right: 0;
+    // left:0;
+    // min-width: 100%;
     min-height: 100%;
     z-index: -1;
     
@@ -306,6 +306,9 @@ header{
     padding-left: 0;
     padding-right: 0;
   }
+}
+.cover{
+  object-fit: cover;
 }
 .cta{
   display: flex;
