@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="row">
+      <img src="../assets/images/test-hero.jpg" alt="background" class="background">
     <div class="col">
       <h1>Welcome to my portfolio</h1>
       <h5>
@@ -14,22 +15,22 @@
       </div>
     </div>
   </header>
-  <div class="divider"></div>
+  <!-- <div class="divider"></div> -->
   <div class="row rows personal">
     <h1>Motivated, passionate and creative</h1>
     <h5>I thrive on learning new skills and evolving</h5>
-    <div class="col-6 col-sm-4 pic">
+    <div class="col-12 pic">
       <img src="../assets/images/rubix-3.png" alt="skills">
     </div>
-    <div class="col-6 col-sm-8 text">
-      <p>My natural resilience and methodical approach to <span>problem solving</span> has proven to be a strength in my ongoing journey as a developer.</p>
+    <div class="col-12 text">
+      <p>My natural resilience and methodical approach to <br><span>problem solving</span><br> has proven to be a strength in my ongoing journey as a developer</p>
     </div>
   </div>
   <div class="divider"></div>
-  <div class="row rows">
+  <div class="row rows cta-row">
     <div class="col cta">
-      <p>View my current flagship <span>projects</span> or check out my <span>blog</span> to view my top 5 JavaScript algorithm challenges.</p>
-      <p>You can also dig into my <span>training and development</span> so far.</p>
+      <p>View my current flagship <span>projects</span> or check out my <span>blog</span>.</p>
+      <p>You can also dig into my <span>training </span>and<span> development</span> so far</p>
       <div class="buttons">
         <router-link :to="{ name: 'Projects' }" class="button" @click="handleScroll">
           <span><i class="bi bi-grid-fill"></i>Projects</span>
@@ -46,7 +47,7 @@
   <div class="divider"></div>
     <div class="row rows facts">
       <div class="col-12 text">
-        <p>Take a look at my GitHub activity via the profile link below or scan through the hundreds of completed JavaScript challenges on my FreeCodeCamp profile.</p>
+        <p>Take a look at my <span>GitHub activity</span> or scan through my <span>FreeCodeCamp</span> profile</p>
       </div>
       <div class="link-icons">
         <a href="https://github.com/Adamskoullos" target="_blank" class="button"><i class="bi bi-github"></i><span>GitHub Profile</span></a>
@@ -81,44 +82,89 @@ export default {
 </script>
 
 <style lang="scss">
+div.wrapper{
+    padding-left: 12px;
+    padding-right: 12px;
 
+  padding-top:0;
+  // box-sizing: border-box;
+  // background: brown;
+}
+header.row{
+  // margin: 0;
+  padding:0;
+}
+header div.col{
+  // background: chartreuse;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding: 0;
+}
 @media (min-width: 690px) and (max-width: 800px) {
-  header {
+  header div.col{
     // background-color: #f00;
     padding-top: 30px;
   }
+  header h1{
+    margin-top:40px;
+  }
 }
 @media (min-width: 600px) and (max-width: 690px) {
-  header {
+  header div.col{
     // background-color: rgb(94, 255, 0);
     padding-top: 40px;
   }
+  header h1{
+    margin-top:50px;
+  }
 }
 @media (min-width: 350px) and (max-width: 600px) {
-  header {
+  header div.col{
     // background-color: rgb(255, 196, 0);
     padding-top: 30px;
   }
+  header h1{
+    margin-top:50px;
+  }
 }
 @media (min-width: 200px) and (max-width: 350px) {
-  header {
+  header div.col{
     // background-color: rgb(255, 196, 0);
     padding-top: 20px;
   }
+  header h1{
+    margin-top:50px;
+  }
 }
 header{
+  // width:100%;
+  position:relative;
   margin-top: 30px;
-  // flex:1;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
+  overflow:hidden;
+  background: rgba(255, 255, 255, 0.6);
+  img.background{
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    right: 0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    
+  }
   h1{
+    font-size: 3.3rem;
     font-weight: 400;
     color: rgb(100, 100, 100);
   }
   h5{
-    font-weight:300;
+    font-weight:400;
     margin-top:10px;
   }
   .tech-icons{
@@ -150,7 +196,8 @@ header{
 .pic{
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
+  margin: 30px auto;
   // max-height: 150px;
   // box-shadow: $box-shadow;
 
@@ -158,7 +205,7 @@ header{
   img{
     // height: 100%;
     max-height: 150px;
-    margin: auto 0px auto auto;
+    margin: auto;
   }
 }
 .text{
@@ -172,36 +219,38 @@ header{
     width:90%;
     // width: 400px;
     margin: auto;
+    font-size: 19px;
     span{
       color: $green;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 500;
     }
     
   }
   
 }
-.rows{
-  margin: 15px 0;
-}
+
+
 .personal{
     // background: chartreuse;
   padding: 20px 20px 10px 20px;
   margin-bottom:0;
+  
   h1{
     font-weight: 400;
     color: rgb(100, 100, 100);
     margin-bottom: 10px;
+    margin-top: 40px;
   }
   h5{
     margin:0px auto 30px auto;
     font-weight:300;
   }
   p{
-    margin: auto auto auto 0;
+    margin: auto;
     padding-left: 10px;
-    border-left: 6px solid rgba(155, 155, 155, 0.2);
-    text-align: justify;
+    // border-left: 6px solid rgba(155, 155, 155, 0.2);
+    text-align: center;
     max-width: 600px;
   }
 }
@@ -259,9 +308,10 @@ header{
   p{
     width:90%;
     max-width: 1200px;
+    font-size: 19px;
     span{
       color: $green;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 500;
     }
   }
@@ -297,6 +347,7 @@ header{
   p{
     width: 90%;
     max-width: 1200px;
+    font-size: 19px;
   }
   a{
     text-decoration: none;

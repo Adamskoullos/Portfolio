@@ -124,7 +124,9 @@ export default {
     }
     .main-content{
       height: 100vh;
-      padding-top: 60px;
+      padding-top: 0px;
+      padding-right:0;
+      padding-left:0;
       display: flex;
       flex-direction: column;
       justify-content: stretch;

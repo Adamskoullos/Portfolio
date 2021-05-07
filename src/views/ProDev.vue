@@ -145,27 +145,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper-prodev{
+  padding-left:15px;
+  padding-right: 15px;
+  padding-top: 60px;
+}
 
 @media (min-width: 690px) and (max-width: 800px) {
   .wrapper-prodev {
     /* // background-color: #f00; */
-    padding-top: 30px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 600px) and (max-width: 690px) {
   .wrapper-prodev {
-    padding-top: 60px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
   .wrapper-prodev {
-    padding-top: 70px;
+    padding-top: 130px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
   .wrapper-prodev {
     /* // background-color: rgb(255, 196, 0); */
-    padding-top: 90px;
+    padding-top: 150px;
   }
 }
 .icons {
