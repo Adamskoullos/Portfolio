@@ -1,6 +1,9 @@
 <template>
-    <h1>Welcome to my developer journal</h1>
-    <input type="text" v-model="search" placeholder="Title search" class="search">
+    <div class="header">
+        <img src="../assets/images/real-blog-m.jpg" alt="background" class="background">
+        <h1>Welcome to my developer journal</h1>
+        <input type="text" v-model="search" placeholder="Title search" class="search">
+    </div>
     <div class="row row-cols-1 row-cols-md-2 g-4 posts-wrapper">
         <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 post-wrapper" v-for="post in postSearch" :key="post.id">
             <router-link :to="{ name: 'SingleBlog', params: {id: post.id} }" class="">
@@ -38,9 +41,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header{
+    background: chartreuse;
+    flex:1;
+    width:100%;
+    padding: 50px 0;
+    overflow:hidden;
+    background: rgba(54, 54, 54, 0.6);
+    position:relative;
+    max-height: 300px;
+    img.background{
+        position: absolute;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        right: 0;
+        left:0;
+        top:0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+}
 h1{
-    font-weight: 400;
-    color: rgb(100, 100, 100);
+    font-size: 3rem;
+    font-weight: 300;
+    // color: rgb(100, 100, 100);
+    color:rgba(255, 255, 255, 0.815);
     margin: 0 auto 15px auto;
 }
 a{
@@ -52,17 +79,22 @@ input.search{
     margin: 10px;
     border: none;
     // box-shadow: $box-shadow;
-    box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+    // box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+    box-shadow: 2px 3px 4px rgba(50,50,50,0.5);
     transition: all ease 0.3s;
     width: 95%;
     max-width: 700px;
+    background: rgba(255, 255, 255, 0.5);
+    
+
 }
 input.search:focus{
     outline: none;
     transition: all ease 0.3s;
     background: rgba(228, 228, 228, 0.164);
     transform: scale(1.004);
-    box-shadow: 1px 2px 5px rgba(143, 143, 143, 0.4);
+    box-shadow: 3px 4px 10px rgba(50,50,50,0.5);
+    background: rgba(255, 255, 255, 0.6);
 }
 .posts-wrapper{
     margin: 5px auto 20px auto;
@@ -82,6 +114,7 @@ input.search:focus{
         border-radius: 0px;
         transition: all ease 0.4s;
         margin: 10px;
+        min-width: 230px;
 
         img{
             border-radius: 0;
@@ -106,6 +139,32 @@ input.search:focus{
         transform: scale(1.01);
     }
 }
-
+@media (min-width: 690px) and (max-width: 800px) {
+  .header{
+    // background-color: #f00;
+    padding-top: 90px;
+  }
+}
+@media (min-width: 600px) and (max-width: 690px) {
+  .header{
+    // background-color: rgb(94, 255, 0);
+    padding-top: 100px;
+    min-height: 350px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  .header{
+    // background-color: rgb(255, 196, 0);
+    padding-top: 130px;
+    min-height: 360px;
+  }
+}
+@media (min-width: 200px) and (max-width: 350px) {
+  .header{
+    // background-color: rgb(255, 196, 0);
+    padding-top: 130px;
+    min-height: 400px;
+  }
+}
 
 </style>

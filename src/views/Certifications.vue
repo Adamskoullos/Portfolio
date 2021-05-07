@@ -158,6 +158,9 @@ p{
   margin: 15px 0 15px auto;
   // margin: 15px auto;
   padding: 0;
+  display: flex;
+  align-items: center;
+
   p{
     text-align: justify;
     padding: 0 15px;

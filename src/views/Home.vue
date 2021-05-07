@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="row">
-      <img src="../assets/images/test-hero.jpg" alt="background" class="background">
+      <img src="../assets/images/real-hero.jpg" alt="background" class="background">
     <div class="col">
       <h1>Welcome to my portfolio</h1>
       <h5>
@@ -28,7 +28,7 @@
   </div>
   <!-- <div class="divider"></div> -->
   <div class="row rows cta-row">
-    <img src="../assets/images/test3-cta.jpg" alt="background" class="background">
+    <img src="../assets/images/real-cta.jpg" alt="background" class="background">
     <div class="col cta">
       <p>View my current flagship <span>projects</span> or check out my <span>blog</span>.</p>
       <p>You can also dig into my <span>training </span>and<span> development</span> so far</p>
@@ -42,6 +42,9 @@
         <router-link :to="{ name: 'Certifications' }" class="button" @click="handleScroll">
           <span><i class="bi bi-award-fill"></i>Certifications & Training</span>
         </router-link>
+        <router-link :to="{ name: 'Contact' }" class="button">
+        <span><i class="bi bi-envelope-fill"></i>Contact</span>
+      </router-link>
       </div>
     </div>
   </div>
@@ -55,16 +58,7 @@
         <a href="https://www.freecodecamp.org/adam-skoullos" target="_blank" class="button"><img src="../assets/icons/fcc-2.png" alt="logo" class="link"><span>FreeCodeCamp Profile</span></a>
       </div>
   </div>
-  <div class="divider"></div>
-  <div class="row rows">
-    <div class="col contact">
-      <p>You can reach out and contact me anytime via the contact form which connects to the Email.js api. I look forward to hearing from you.</p>
-      <router-link :to="{ name: 'Contact' }" class="button">
-        <span><i class="bi bi-envelope-fill"></i>Contact</span>
-      </router-link>
-    </div>
-  </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -82,7 +76,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 div.wrapper{
     padding-left: 12px;
     padding-right: 12px;
@@ -140,7 +134,7 @@ header div.col{
 header{
   // width:100%;
   position:relative;
-  margin-top: 30px;
+  // margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -234,7 +228,7 @@ header{
 
 .personal{
     // background: chartreuse;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 20px 60px 20px;
   margin-bottom:0;
   
   h1{
@@ -244,8 +238,8 @@ header{
     margin-top: 40px;
   }
   h5{
-    margin:0px auto 30px auto;
-    font-weight:300;
+    margin:0px auto 5px auto;
+    font-weight:400;
   }
   p{
     margin: auto;
@@ -256,7 +250,7 @@ header{
   }
 }
 .facts{
-  padding: 50px 20px 25px 20px;
+  padding: 60px 20px 60px 20px;
   margin: 0;
   p{
     text-align: center;
@@ -318,7 +312,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px 50px 20px;
+  padding: 60px 20px 60px 20px;
   p{
     width:90%;
     max-width: 1200px;
@@ -342,6 +336,7 @@ header{
       margin: 10px 10px;
       padding: 10px;
       background: $green;
+      box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
         
         i{
           margin-right: 5px;
@@ -357,6 +352,7 @@ header{
     a.button:hover{
       background: #30465F;
       transition: all ease 0.7s;
+      box-shadow: 1px 2px 10px rgba(50,50,50,0.4);
     }
     
   }
@@ -398,7 +394,7 @@ header{
 }
 div.divider{
   height: 1px;
-  width: 90%;
+  width: 100%;
   background: rgba(155, 155, 155, 0.1);
   margin: 20px auto;
   padding: 1px 0;

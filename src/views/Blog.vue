@@ -44,7 +44,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin: 20px auto;
+    // margin: 20px auto;
     a{
       display: flex;
       align-items: center;
@@ -59,6 +59,9 @@ export default {
     a:hover{
       color: $primary;
     }
+}
+div.wrapper{
+    padding:0;
 }
 .wrapper{
     display: flex;

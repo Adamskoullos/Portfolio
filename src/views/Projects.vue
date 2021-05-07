@@ -92,9 +92,10 @@ export default {
 </script>
 
 <style lang="scss">
-.wrapper{
-  padding-left:15px;
-  padding-right: 15px;
+div.wrapper{
+  padding-left:20px;
+  padding-right: 20px;
+  padding-top: 60px;
 } 
 
 @media (min-width: 690px) and (max-width: 800px) {

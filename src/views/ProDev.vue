@@ -146,8 +146,8 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper-prodev{
-  padding-left:15px;
-  padding-right: 15px;
+  padding-left:20px;
+  padding-right: 20px;
   padding-top: 60px;
 }
 
