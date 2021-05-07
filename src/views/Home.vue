@@ -26,8 +26,9 @@
       <p>My natural resilience and methodical approach to <br><span>problem solving</span><br> has proven to be a strength in my ongoing journey as a developer</p>
     </div>
   </div>
-  <div class="divider"></div>
+  <!-- <div class="divider"></div> -->
   <div class="row rows cta-row">
+    <img src="../assets/images/test3-cta.jpg" alt="background" class="background">
     <div class="col cta">
       <p>View my current flagship <span>projects</span> or check out my <span>blog</span>.</p>
       <p>You can also dig into my <span>training </span>and<span> development</span> so far</p>
@@ -44,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class="divider"></div>
+  <!-- <div class="divider"></div> -->
     <div class="row rows facts">
       <div class="col-12 text">
         <p>Take a look at my <span>GitHub activity</span> or scan through my <span>FreeCodeCamp</span> profile</p>
@@ -145,7 +146,7 @@ header{
   align-items: stretch;
   justify-content: stretch;
   overflow:hidden;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.55);
   img.background{
     position: absolute;
     padding-left: 0;
@@ -221,7 +222,7 @@ header{
     margin: auto;
     font-size: 19px;
     span{
-      color: $green;
+      color: $blue;
       font-size: 26px;
       font-weight: 500;
     }
@@ -233,7 +234,7 @@ header{
 
 .personal{
     // background: chartreuse;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 50px 20px;
   margin-bottom:0;
   
   h1{
@@ -255,7 +256,7 @@ header{
   }
 }
 .facts{
-  padding: 20px 20px 10px 20px;
+  padding: 50px 20px 25px 20px;
   margin: 0;
   p{
     text-align: center;
@@ -299,18 +300,32 @@ header{
   
 
 }
+.cta-row{
+  position:relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.65);
+  img{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .cta{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 20px 10px 20px;
+  padding: 50px 20px 50px 20px;
   p{
     width:90%;
     max-width: 1200px;
     font-size: 19px;
+    font-weight: 500;
     span{
-      color: $green;
+      color: $blue;
       font-size: 26px;
       font-weight: 500;
     }
@@ -326,24 +341,33 @@ header{
       text-decoration: none;
       margin: 10px 10px;
       padding: 10px;
-      // background: olive;
-      
+      background: $green;
         
         i{
           margin-right: 5px;
+          color: white;
           // vertical-align: -.2em;
         }
+        span{
+          color: white;
+          font-weight: 500;
+        }
       
+    }
+    a.button:hover{
+      background: #30465F;
+      transition: all ease 0.7s;
     }
     
   }
 }
 
 .contact{
-  padding: 20px;
+  padding: 25px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
   p{
     width: 90%;
     max-width: 1200px;
