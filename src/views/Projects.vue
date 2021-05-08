@@ -1,5 +1,9 @@
 <template>
   <div class="wrapper">
+    <div class="projects-hero">
+      <h1>Flagship Projects</h1>
+      <img src="../assets/images/test9-projects.jpg" alt="background" class="background cover">
+    </div>
     <div class="row project">
       <div class="col project-col">
         <h1>ProDev</h1>
@@ -91,35 +95,74 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 div.wrapper{
-  padding-left:20px;
-  padding-right: 20px;
-  padding-top: 60px;
+  box-sizing: border-box;
+  
 } 
-
-@media (min-width: 690px) and (max-width: 800px) {
-  div.wrapper {
-    // background-color: #f00;
-    padding-top: 100px;
+.projects-hero{
+  margin-right: 0;
+  margin-left:0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 300px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+  // background: gold;
+  img{
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    top:0;
+    // right: 0;
+    // left:0;
+    // min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  h1{
+    font-size: 3.3rem;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+    // display: none;
+    // color:rgba(255, 255, 255, 0.9);
   }
 }
-@media (min-width: 600px) and (max-width: 690px) {
-  div.wrapper {
+
+@media (min-width: 670px) and (max-width: 800px) {
+  div.projects-hero {
+    // background-color: #f00;
+    padding-top: 100px;
+    margin-top:50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 670px) {
+  div.projects-hero {
     // background-color: rgb(94, 255, 0);
     padding-top: 150px;
+    margin-top:90px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
-  div.wrapper {
+  div.projects-hero {
     // background-color: rgb(255, 196, 0);
     padding-top: 150px;
+    margin-top:90px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
-  div.wrapper {
+  div.projects-hero {
     // background-color: rgb(255, 196, 0);
     padding-top: 150px;
+    margin-top:90px;
   }
 } 
 
@@ -129,9 +172,17 @@ div.wrapper{
   align-items: stretch;
   justify-content: stretch;
   margin-bottom: 40px;
-
+  padding-left:12px;//hfhfhg
+  padding-right:12px;//hfhfghf
+  margin-right: 10px;
+  margin-left: 10px;
+  // background: green;
+  .project-col{
+    padding:0;
+    // background: gray;
+  }
   h1{
-    margin: 15px auto;
+    margin: 30px auto 15px auto;
     font-size: 60px;
     font-weight: 300;
     color: rgb(100, 100, 100);

@@ -155,7 +155,7 @@ header{
   }
   h1{
     font-size: 3.3rem;
-    font-weight: 400;
+    font-weight: 300;
     color: rgb(100, 100, 100);
   }
   h5{
@@ -232,7 +232,7 @@ header{
   margin-bottom:0;
   
   h1{
-    font-weight: 400;
+    font-weight: 300;
     color: rgb(100, 100, 100);
     margin-bottom: 10px;
     margin-top: 40px;
@@ -340,6 +340,7 @@ header{
       padding: 10px;
       background: $green;
       box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+      transition: all ease 0.7s;
         
         i{
           margin-right: 5px;
@@ -354,7 +355,7 @@ header{
     }
     a.button:hover{
       background: #30465F;
-      transition: all ease 0.7s;
+      transition: all ease 0.9s;
       box-shadow: 1px 2px 10px rgba(50,50,50,0.4);
     }
     
@@ -382,6 +383,7 @@ header{
   .button{
     margin: 10px;
     background: $green;
+    transition: all ease 0.7s;
     span{
       color: white;
       font-weight: 500;
@@ -392,7 +394,7 @@ header{
   }
   .button:hover{
     background: #30465F;
-    transition: all ease 0.7s;
+    transition: all ease 0.9s;
   }
 }
 div.divider{
