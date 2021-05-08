@@ -115,7 +115,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.new-blog{
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-top: 60px;
+}
 .marked{
   margin: 30px auto;
   text-align: justify;
@@ -237,23 +241,23 @@ form{
 @media (min-width: 690px) and (max-width: 800px) {
   .new-blog {
     /* // background-color: #f00; */
-    padding-top: 30px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 600px) and (max-width: 690px) {
   .new-blog {
-    padding-top: 60px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
   .new-blog {
-    padding-top: 70px;
+    padding-top: 130px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
   .new-blog {
     /* // background-color: rgb(255, 196, 0); */
-    padding-top: 90px;
+    padding-top: 150px;
   }
 }
 </style>

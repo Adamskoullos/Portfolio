@@ -88,25 +88,25 @@ export default {
 @media (min-width: 690px) and (max-width: 800px) {
   .wrapper {
     // background-color: #f00;
-    padding-top: 30px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 600px) and (max-width: 690px) {
   .wrapper {
     // background-color: rgb(94, 255, 0);
-    padding-top: 60px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
   .wrapper {
     // background-color: rgb(255, 196, 0);
-    padding-top: 70px;
+    padding-top: 130px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
   .wrapper {
     // background-color: rgb(255, 196, 0);
-    padding-top: 90px;
+    padding-top: 170px;
   }
 }
 .intro{

@@ -23,6 +23,12 @@
             @before-enter="ulBeforeEnter"
             @enter="ulEnter">
             <ul class="navbar-nav">
+                <li class="nat-item" v-if="user">
+                    <router-link :to="{ name: 'NewBlog' }" @click="handleScroll" v-if="user">
+                        <span class="material-icons">create</span>
+                        <h5>New post</h5>
+                    </router-link>
+                </li>
                 <li class="nav-item" >
                     <router-link :to="{ name: 'Home' }" @click="handleScroll">
                         <i class="bi bi-house-fill"></i>
@@ -225,7 +231,7 @@ nav{
                 font-weight: 300;
             }
             .logged-in{
-                color: #30465F;
+                color: $green;
                 font-weight: 500;
             }
         }
@@ -258,6 +264,11 @@ nav{
                     margin-left: 15px;
                     color: $icon;
                 }
+                span{
+                    font-size: 22px;
+                    margin-left: 15px;
+                    color: $icon;
+                }
             }
             a:hover{
                 transform: scale(1.02);
@@ -283,7 +294,7 @@ nav{
                     color:$active-link-font-color;
                     font-weight: 300;
                 }
-                i{
+                i, span{
                     color: $active-link-icon;
                 }
             }

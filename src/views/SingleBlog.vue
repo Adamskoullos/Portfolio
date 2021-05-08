@@ -68,7 +68,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  // background: grey;
+  padding-top: 60px;
 
   .blog-wrapper{
     flex:1;
@@ -137,23 +137,23 @@ export default {
 @media (min-width: 690px) and (max-width: 800px) {
   .main-wrapper {
     /* // background-color: #f00; */
-    padding-top: 30px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 600px) and (max-width: 690px) {
   .main-wrapper {
-    padding-top: 60px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
   .main-wrapper {
-    padding-top: 70px;
+    padding-top: 130px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
   .main-wrapper {
     /* // background-color: rgb(255, 196, 0); */
-    padding-top: 90px;
+    padding-top: 150px;
   }
 }
 .buttons{

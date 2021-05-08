@@ -99,25 +99,25 @@ div.wrapper{
 } 
 
 @media (min-width: 690px) and (max-width: 800px) {
-  .wrapper {
+  div.wrapper {
     // background-color: #f00;
-    padding-top: 90px;
+    padding-top: 100px;
   }
 }
 @media (min-width: 600px) and (max-width: 690px) {
-  .wrapper {
+  div.wrapper {
     // background-color: rgb(94, 255, 0);
-    padding-top: 120px;
+    padding-top: 150px;
   }
 }
 @media (min-width: 350px) and (max-width: 600px) {
-  .wrapper {
+  div.wrapper {
     // background-color: rgb(255, 196, 0);
-    padding-top: 130px;
+    padding-top: 150px;
   }
 }
 @media (min-width: 200px) and (max-width: 350px) {
-  .wrapper {
+  div.wrapper {
     // background-color: rgb(255, 196, 0);
     padding-top: 150px;
   }

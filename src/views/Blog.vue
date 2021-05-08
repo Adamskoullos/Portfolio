@@ -1,11 +1,5 @@
 <template>
   <div class="wrapper">
-        <div class="button-wrapper">
-            <router-link :to="{ name: 'NewBlog' }" class="button" @click="handleScroll" v-if="user">
-                <span class="material-icons">create</span>
-                New post
-            </router-link>
-        </div>
         <div class="posts-window">
             <div v-if="error" class="error">
                 <h4>Cannot access the the Blog database</h4>
