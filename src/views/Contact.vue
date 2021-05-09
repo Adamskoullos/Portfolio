@@ -66,7 +66,7 @@ export default {
 <style lang="scss">
 .contact-container{
   flex:1;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   position: relative;
   img{
     position: absolute;
@@ -80,6 +80,7 @@ export default {
 }
 .form-wrapper{
   padding-top: 60px;
+  padding-bottom: 60px;
     // margin: 7vh auto auto auto;
     display: flex;
     flex-direction: column;

@@ -1,10 +1,13 @@
 <template>
   <div class="wrapper">
-    <h1><i class="bi bi-award-fill"></i>Certifications & Training</h1>
-    <div class="row">
+    <div class="training-hero">
+      <img src="../assets/images/test-training.png" alt="background" class="background cover">
+      <h1><i class="bi bi-award-fill"></i>Certifications & Training</h1>
+    </div>
+    <div class="row row-intro">
       <div class="col intro">
         <h2>Development Strategy</h2>
-        <p>My approach in becoming a full-stack developer was to go with one long term course that includes milestone projects, mentoring and touches upon many technologies. And then to supplement this core journey with focused satellite courses to deep-dive specific skills and technologies. </p>
+        <p>My approach in becoming a full-stack developer was to go with one long term course that includes milestone projects and mentoring. And then to supplement this core journey with focused satellite courses to deep-dive specific skills and technologies. </p>
       </div>
     </div>
     <div class="divider"></div>
@@ -85,32 +88,101 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div.wrapper{
+    padding-left: 0px;
+    padding-right: 0px;
+    // background: green;
+    box-sizing: border-box;
+}
+.row{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 @media (min-width: 690px) and (max-width: 800px) {
-  .wrapper {
+  div.training-hero {
     // background-color: #f00;
-    padding-top: 90px;
-  }
-}
-@media (min-width: 600px) and (max-width: 690px) {
-  .wrapper {
-    // background-color: rgb(94, 255, 0);
-    padding-top: 120px;
-  }
-}
-@media (min-width: 350px) and (max-width: 600px) {
-  .wrapper {
-    // background-color: rgb(255, 196, 0);
     padding-top: 130px;
   }
 }
-@media (min-width: 200px) and (max-width: 350px) {
-  .wrapper {
-    // background-color: rgb(255, 196, 0);
-    padding-top: 170px;
+@media (min-width: 600px) and (max-width: 690px) {
+  div.training-hero {
+    // background-color: rgb(94, 255, 0);
+    padding-top: 160px;
   }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  div.training-hero {
+    // background-color: rgb(255, 196, 0);
+    padding-top: 140px;
+  }
+  div.intro{
+    margin-top: 0px;
+  }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  div.training-hero {
+    // background-color: rgb(255, 196, 0);
+    padding-top: 110px;
+  }
+  div.intro{
+    margin-top: 0px;
+  }
+}
+@media (min-width: 200px) and (max-width: 399px) {
+  div.training-hero {
+    // background-color: rgb(255, 196, 0);
+    padding-top: 70px;
+    h1{
+      padding-top:15px;
+    }
+  }
+  i{
+    display: none;
+  }
+  div.intro{
+    margin-top: 0px;
+  }
+
+}
+.training-hero{
+  // background:gray;
+  padding-top:75px;
+  padding-bottom: 75px;
+  width:100%;
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+  // padding-left: 12px;
+  // padding-right: 12px;
+  img{
+    position: absolute;
+    z-index: -1;
+    // top:0;
+    // left:0;
+    width: 100%;
+  }
+  h1{
+    font-size: 3.3rem;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+  }
+  i{
+    color: rgb(100, 100, 100);
+  }
+}
+.row-intro{
+  // background: brown;
+  // width:100%;
+  margin:auto
 }
 .intro{
   margin: 30px auto;
+  width:100%;
+  // margin-left:0;
+  // margin-right: 0;
 }
 h1{
   font-weight: 200;
@@ -227,7 +299,8 @@ div.divider{
   padding: 1px 0;
 }
 .contact{
-  padding: 20px;
+  padding: 50px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
