@@ -1,17 +1,20 @@
 <template>
-  <div class="form-wrapper">
-    <h1><i class="bi bi-envelope-fill"></i>Contact</h1>
-    <h3>Thank you for getting in touch</h3>
-    <p>Please fill out the form below with a short message and I will come back to you from my direct email. You can leave your number if you prefer me to call you directly. Thank you</p>
-    <form @submit.prevent="handleSubmit">
-      <input type="text" placeholder="Name" v-model="name" required>
-      <input type="email" placeholder="Email" v-model="email" required>
-      <input type="number" placeholder="Phone" v-model="phone">
-      <textarea type="text" placeholder="Message" v-model="message"></textarea>
-      <div>{{ error }}</div>
-      <button v-if="!sending"><span class="material-icons">send</span>Send</button>
-      <button v-if="sending" class="sending"><span class="material-icons">send</span>Sending...</button>
-    </form>
+<div class="contact-container">
+  <img src="../assets/images/home-hero.jpg" alt="background" class="background cover">
+    <div class="form-wrapper">
+      <h1><i class="bi bi-envelope-fill"></i>Contact</h1>
+      <h3>Thank you for getting in touch</h3>
+      <p>Please fill out the form below with a short message and I will come back to you from my direct email. You can leave your number if you prefer me to call you directly. Thank you</p>
+      <form @submit.prevent="handleSubmit">
+        <input type="text" placeholder="Name" v-model="name" required>
+        <input type="email" placeholder="Email" v-model="email" required>
+        <input type="number" placeholder="Phone" v-model="phone">
+        <textarea type="text" placeholder="Message" v-model="message"></textarea>
+        <div>{{ error }}</div>
+        <button v-if="!sending"><span class="material-icons">send</span>Send</button>
+        <button v-if="sending" class="sending"><span class="material-icons">send</span>Sending...</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -61,12 +64,30 @@ export default {
 </script>
 
 <style lang="scss">
+.contact-container{
+  flex:1;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  img{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: -1;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+  }
+}
 .form-wrapper{
-    margin: 7vh auto auto auto;
+  padding-top: 60px;
+    // margin: 7vh auto auto auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // background: gray;
+    // background: rgba(255, 255, 255, 0.8);
+    
     h1{
       font-weight: 200;
       margin: 20px auto;
@@ -98,30 +119,31 @@ export default {
         padding: 10px;
         margin: 10px;
         border: none;
-        // box-shadow: $box-shadow;
-        box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+        background: rgba(228, 228, 228, 0.164);
+        box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
         transition: all ease 0.3s;
       }
       input:focus{
         outline: none;
         transition: all ease 0.3s;
-        background: rgba(228, 228, 228, 0.164);
+        background: rgba(255, 255, 255, 0.4);
         transform: scale(1.005);
-        box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+        box-shadow: 1px 2px 8px rgba(50,50,50,0.4);
       }
       textarea{
         padding: 10px;
         margin: 10px;
         border: none;
-        box-shadow: 1px 1px 2px rgba(50,50,50,0.4);
+        background: rgba(228, 228, 228, 0.164);
+        box-shadow: 1px 1px 3px rgba(50,50,50,0.4);
         transition: all ease 0.3s;
       }
       textarea:focus{
         outline: none;
         transition: all ease 0.3s;
-        background: rgba(228, 228, 228, 0.164);
+        background: rgba(255, 255, 255, 0.4);
         transform: scale(1.005);
-        box-shadow: 1px 2px 5px rgba(50,50,50,0.4);
+        box-shadow: 1px 2px 8px rgba(50,50,50,0.4);
       }
       button{
         background: white;
@@ -158,5 +180,29 @@ export default {
         font-size: 18px;
       } 
     }
+}
+@media (min-width: 690px) and (max-width: 800px) {
+  div.form-wrapper{
+    // background-color: #f00;
+    padding-top: 90px;
+  }
+}
+@media (min-width: 600px) and (max-width: 690px) {
+  div.form-wrapper{
+    // background-color: rgb(94, 255, 0);
+    padding-top: 150px;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  div.form-wrapper{
+    // background-color: rgb(255, 196, 0);
+    padding-top: 170px;
+  }
+}
+@media (min-width: 200px) and (max-width: 350px) {
+  div.form-wrapper{
+    // background-color: rgb(255, 196, 0);
+    padding-top: 170px;
+  }
 }  
 </style>
