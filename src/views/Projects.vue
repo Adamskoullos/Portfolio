@@ -61,6 +61,103 @@
       </div>
     </div>
     <div class="divider"></div>
+    <div class="row project portfolio-join">
+      <div class="col project-col">
+        <h1>Not just a Portfolio</h1>
+        <h5>
+          My current Portfolio was built after ProDev thus has been used to
+          crystallise and build on the lessons learned during the ProDev build
+          process
+        </h5>
+        <div class="tech-icons">
+          <img src="../assets/icons/marked.png" alt="logo" />
+          <img src="../assets/icons/vue.png" alt="logo" />
+          <img src="../assets/icons/bootstrap.png" alt="logo" />
+          <img src="../assets/icons/gsap.png" alt="logo" />
+          <img src="../assets/icons/sass.png" alt="logo" />
+          <img src="../assets/icons/firebase.png" alt="logo" />
+        </div>
+        <div class="row project-overview portfolio-join">
+          <div class="col-12 col-xl-6 project-image">
+            <img
+              src="../assets/images/portfolio-main2.png"
+              alt="project image"
+            />
+          </div>
+          <div class="col-12 col-xl-6 overview">
+            <h5>SASS:</h5>
+            <p>
+              I have learnt how to implement SASS into a Vue 3 project to have
+              both global and local SCSS styling using variables and nested
+              scoping
+            </p>
+            <h5>GSAP:</h5>
+            <p>
+              I have incrementally increased my ability to utilise GSAP and have
+              implemented a sequenced animation for the side-nav on-load
+            </p>
+            <h5>bootstrap 5 Cards:</h5>
+            <p>
+              I have introduced the use of Boostsrap 5 cards to present blog
+              post previews
+            </p>
+            <h5>Markdown Blog:</h5>
+            <p>
+              I have built a markdown blog utilising a Firebase back-end with
+              Firestore and Storage. The new blog post page includes a live
+              markdown previewer
+            </p>
+            <h5>User Authentication:</h5>
+            <p>
+              There is a secret login with a different UI for the logged in user
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col project-col portfolio-two">
+        <h1>Refinement of SKills</h1>
+        <h5>
+          This is an image of the new blog post page showing the markdown live
+          previewer
+        </h5>
+        <div class="row project-overview">
+          <div class="col-12 col-xl-6 project-image">
+            <img src="../assets/images/new-blog-page.png" alt="project image" />
+          </div>
+          <div class="col-12 col-xl-6 overview">
+            <h5>Custom Built Components:</h5>
+            <p>
+              Custom designed and built navigation components, buttons and
+              responsive behaviour utilising a mix of Bootstrap 5 icons and
+              Material icons
+            </p>
+            <h5>CSS Styling:</h5>
+            <p>
+              Refinement in the use of box-shadows, transitions and transforms
+            </p>
+            <h5>Vue:</h5>
+            <p>
+              Further experience using Vue Router, Vue 3 and the composition api
+            </p>
+            <h5>Firebase:</h5>
+            <p>
+              Further experience working with firebase tools and interacting
+              with Firebase services api’s including deployment and hosting also
+              setting up a custom domain
+            </p>
+            <h5>Positioning:</h5>
+            <p>
+              Improved consistency in positioning content with the use of
+              Boostsrap rows and columns in conjunction with Flexbox for
+              elements within columns
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
     <div class="row project">
       <div class="col project-col">
         <h1>Trader Dashboards</h1>
@@ -216,7 +313,19 @@
       margin-top: 90px;
     }
   }
-
+  div.portfolio-join,
+  div.portfolio-join.project-overview {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  div.portfolio-two {
+    h1 {
+      margin: 0 auto 15px auto;
+    }
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
   .project {
     display: flex;
     flex-direction: column;
