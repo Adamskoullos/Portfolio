@@ -138,7 +138,8 @@
           // text-align: left;
           text-decoration: none;
           font-weight: 500;
-          color: rgb(100, 100, 100);
+          // color: rgb(100, 100, 100);
+          color: rgb(70, 70, 70);
         }
         p {
           text-align: center;

@@ -428,7 +428,7 @@
       h5 {
         margin: auto auto 5px 15px;
         font-weight: 500;
-        color: rgb(87, 87, 87);
+        color: rgb(70, 70, 70);
       }
       p {
         text-align: justify;
