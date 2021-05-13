@@ -18,4 +18,4 @@ The focus for skill development during the build process included:
 - Use of Bootstrap 5 cards
 - building on GSAP familiarity with the use of sequenced animations, in conjunctions with Vue transitions and JavaScript hooks
 
-Click [here](#https://adamskoullos.com/projects) to get a more detailed breakdown of this build and other current projects.
+Click **[here](https://adamskoullos.com/projects)** to get a more detailed breakdown of this build and other current projects.
