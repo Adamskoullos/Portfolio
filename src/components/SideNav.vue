@@ -65,7 +65,7 @@
         </li>
         <li class="nav-item">
           <a
-            href="https://drive.google.com/file/d/1wbSA-j_UQG9RyzB0Uz4mO2FZgdy2Ng_0/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-IB3TsRH0_vszum-HewmgRhJoUqoM03T/view?usp=sharing"
             download
             target="_blank"
           >
