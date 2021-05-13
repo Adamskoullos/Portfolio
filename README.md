@@ -2,7 +2,7 @@
 
 # Welcome to my portfolio
 
-**[Live link](#https://adamskoullos.com/)**
+**[Live link](https://adamskoullos.com/)**
 
 Built using the Vue cli, Vue-router and Vue 3 and the composition api. I am using the Marked markdown previewer for the blog and Firebase Firestore, Storage and Authentication.
 
