@@ -65,12 +65,18 @@
         </li>
         <li class="nav-item">
           <a
-            href="https://drive.google.com/file/d/1-IB3TsRH0_vszum-HewmgRhJoUqoM03T/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NSselHiSqSl7jGeXOAtYhxFhzghCmOnW/view?usp=sharing"
             download
             target="_blank"
           >
             <i class="bi bi-file-earmark-person-fill"></i>
             <h5>Resume PDF</h5>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://linkedin.com/in/adam-skoullos" target="_blank">
+            <i class="bi bi-linkedin"></i>
+            <h5>LinkedIn</h5>
           </a>
         </li>
       </ul>
@@ -82,7 +88,6 @@
   import gsap from "gsap";
   import useLogout from "../composables/useLogout";
   import { useRouter } from "vue-router";
-  import { ref } from "@vue/reactivity";
 
   export default {
     props: ["login", "user"],

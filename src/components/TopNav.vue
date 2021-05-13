@@ -29,7 +29,7 @@
         </li>
         <li class="nav-item">
           <a
-            href="https://drive.google.com/file/d/1-IB3TsRH0_vszum-HewmgRhJoUqoM03T/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NSselHiSqSl7jGeXOAtYhxFhzghCmOnW/view?usp=sharing"
             download
             target="_blank"
           >
