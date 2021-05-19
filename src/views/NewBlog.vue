@@ -40,7 +40,6 @@
   import marked from "marked";
   import DOMPurify from "dompurify";
   import hljs from "highlight.js";
-  // import 'highlight.js/styles/a11y-light.css';
   import "highlight.js/styles/solarized-dark.css";
   import { computed } from "@vue/runtime-core";
 

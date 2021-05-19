@@ -32,7 +32,6 @@
     onBeforeMount,
     onBeforeUpdate,
     onUnmounted,
-    onUpdated,
   } from "@vue/runtime-core";
   import getUser from "./composables/getUser";
 
